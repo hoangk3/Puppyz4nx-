@@ -43,18 +43,22 @@ function Nav() {
 
   const goalIcon = (
     <svg className="w-5 h-5 text-rose-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-      {/* icon mục tiêu/đích */}
+      {/* icon mục tiêu */}
       <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 17a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/>
       <path d="M12 7a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/>
     </svg>
   );    
-    const donateIcon = (
-    <svg className="w-5 h-5 text-rose-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-      {/* icon DONATE CHO TAO */}
-      <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 17a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/>
-      <path d="M12 7a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/>
+
+  const donateIcon = (
+    <svg className="w-5 h-5 text-red-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+      {/* icon donate - trái tim */}
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+               2 6 4 4 6.5 4c1.74 0 3.41 1 4.22 2.44h.56C13.09 5 
+               14.76 4 16.5 4 19 4 21 6 21 8.5c0 3.78-3.4 
+               6.86-8.55 11.54L12 21.35z"/>
     </svg>
   );    
+
   return (
     <div className="flex md:p-2 pb-8 py-2 px-5 md:rounded-xl bg-white shadow-sm md:mt-3 md:border-none">
       <div className="flex gap-3 text-neutral-800 font-bold text-base flex-wrap">
@@ -72,3 +76,4 @@ function Nav() {
 }
 
 export default Nav;
+
