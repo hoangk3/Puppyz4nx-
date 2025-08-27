@@ -14,6 +14,7 @@ import tailwindIcon from "../../assets/icons/tailwind.svg";
 import reactIcon from "../../assets/icons/react.svg";
 import typescriptIcon from "../../assets/icons/typescript.svg";
 import pythonIcon from "../../assets/icons/python.svg";
+import cppIcon from "../../assets/icons/cpp.svg";
 
 class Skill {
   constructor(name, content, img, skillLevel) {
@@ -54,6 +55,12 @@ function Skills() {
   };
 
   const skillList = [
+    new Skill(
+    "C++",
+    "C++: Ngôn ngữ lập trình mạnh mẽ, hỗ trợ cả lập trình hướng đối tượng và lập trình thủ tục. Thường được dùng trong phát triển phần mềm hệ thống, game, và ứng dụng hiệu năng cao ( đây là ngôn ngữ main của chủ web) ⚡.",
+    cppIcon,
+    [brandStar, brandStar, regularStar, regularStar, regularStar]
+  ),
     new Skill("HTML", "HTML: (Ngôn ngữ đánh dấu siêu văn bản) là khối xây dựng 🧱 của cách trang web, sử dụng các thẻ để xác định cấu trúc và nội dung.", htmlIcon, [
       brandStar,
       brandStar,
