@@ -59,13 +59,13 @@ function Skills() {
     "C++",
     "C++: Ngôn ngữ lập trình mạnh mẽ, hỗ trợ cả lập trình hướng đối tượng và lập trình thủ tục. Thường được dùng trong phát triển phần mềm hệ thống, game, và ứng dụng hiệu năng cao ( đây là ngôn ngữ main của chủ web) ⚡.",
     cppIcon,
-    [brandStar, brandStar, regularStar, regularStar, regularStar]
+    [brandStar, brandStar, brandStar, brandStar, brandStar]
   ),
     new Skill("HTML", "HTML: (Ngôn ngữ đánh dấu siêu văn bản) là khối xây dựng 🧱 của cách trang web, sử dụng các thẻ để xác định cấu trúc và nội dung.", htmlIcon, [
       brandStar,
       brandStar,
       brandStar,
-      regularStar,
+      brandStar,
       regularStar,
     ]),
     new Skill("CSS", "CSS: (Cascading Style Sheets) Ngôn ngữ kiểu tạo bố cục và trình bày cho HTML, giúp nhà phát triển thiết kế trang web hấp dẫn về mặt hình ảnh 🎨.", cssIcon, [
@@ -78,24 +78,20 @@ function Skills() {
     // eslint-disable-next-line
     new Skill("JavaScript", "JavaScript: Ngôn ngữ linh hoạt tạo tính tương tác ✨ và động 🥏 cho trang web, mang lại trải nghiệm hấp dẫn cho người dùng.", javascriptIcon, [
       brandStar,
-      regularStar,
-      regularStar,
-      regularStar,
+      brandStar,
+      brandStar,
+      brandStar,
       regularStar,
     ]),
     new Skill("TypeScript", "TypeScript: Ngôn ngữ lập trình mạnh mẽ được xây dựng trên JavaScript, cung cấp cho bạn công cụ tốt hơn ở mọi quy mô", typescriptIcon, [
       brandStar,
-      regularStar,
-      regularStar,
+      brandStar,
+      brandStar,
       regularStar,
       regularStar,
     ]),
     new Skill("Python", "Python:  Ngôn ngữ có hình thức rất sáng sủa, cấu trúc rõ ràng, thuận tiện cho người mới học lập trình và là ngôn ngữ lập trình dễ học", pythonIcon, [
-      brandStar,
-      regularStar,
-      regularStar,
-      regularStar,
-      regularStar,
+     brandStar, brandStar, brandStar, brandStar, regularStar
     ]),
     new Skill("Tailwind CSS", "Tailwind CSS: Framework CSS ưu tiên tiện ích cho phép các nhà phát triển nhanh chóng xây dựng giao diện người dùng mà không cần rời khỏi HTML của mình.", tailwindIcon, [
       brandStar,
@@ -106,8 +102,8 @@ function Skills() {
     ]),
     new Skill("ReactJS", "ReactJS: Thư viện dành cho giao diện người dùng gốc và web. Xây dựng giao diện người dùng từ các phần riêng lẻ được gọi là các component được viết bằng JavaScript.", reactIcon, [
       brandStar,
-      regularStar,
-      regularStar,
+      brandStar,
+      brandStar,
       regularStar,
       regularStar,
     ]),
@@ -121,8 +117,8 @@ function Skills() {
     new Skill("GitHub", "GitHub: Nền tảng cung cấp các công cụ cộng tác và kiểm soát phiên bản, cho phép các nhà phát triển lưu trữ 👩‍💻, đánh giá và quản lý kho mã cho các dự án phần mềm.", githubIcon, [
       brandStar,
       brandStar,
-      regularStar,
-      regularStar,
+      brandStar,
+      brandStar,
       regularStar,
     ]),
     new Skill("Notepad++", "Notepad++: Trình soạn thảo văn bản 📝 mã nguồn mở và miễn phí dành cho Windows. Đây là một công cụ nhẹ và nhiều tính năng.", notepadppIcon, [
