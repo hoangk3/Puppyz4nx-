@@ -60,7 +60,7 @@ function Nav() {
   );    
 
   return (
-    <div className="flex md:p-2 pb-8 py-2 px-5 md:rounded-xl bg-white shadow-sm md:mt-3 md:border-none">
+    <div className="flex md:p-2 pb-8 py-2 px-5 md:rounded-xl bg-white/40 shadow-sm md:mt-3 md:border-none">
       <div className="flex gap-3 text-neutral-800 font-bold text-base flex-wrap">
         <Link to="/"><div className={navItemStyle}>About {aboutIcon}</div></Link>
         <Link to="/projects"><div className={navItemStyle}>Projects {projectIcon}</div></Link>

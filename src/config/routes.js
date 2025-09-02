@@ -1,4 +1,3 @@
-import { faDonate } from "@fortawesome/free-solid-svg-icons";
 
 const routes = {
   home: "/",

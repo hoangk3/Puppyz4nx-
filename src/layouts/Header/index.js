@@ -8,7 +8,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
-    <div className='p-5 md:rounded-xl bg-white shadow-sm text-neutral-800'>
+    <div className='p-5 md:rounded-xl bg-white/40 shadow-sm text-neutral-800'>
       <Discord></Discord>
       <div className='flex mt-4 gap-2 text-xl'>
         <Tippy animation='scale' content='Gmail'>
