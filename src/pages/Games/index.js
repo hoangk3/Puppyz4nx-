@@ -22,7 +22,7 @@ import { fetchNews, fetchCodes } from "../../api/hoyoverse.js";
 // Translations (Chinese only)
 const t = {
   gamesTitle: "Game 🎮",
-  playedGames: "Các Game Tôi Chơi Và Time...✨",
+  playedGames: "Các Game Tôi Từng Chơi ...✨",
   topGames: "⬤ Game 🌎 Chơi Nhiều Nhất",
   allGames: "⬤ Tất Cả 🎏",
   gameEvents: "⬤ Sự Kiện Chính 🎉",

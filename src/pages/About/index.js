@@ -55,11 +55,10 @@ function About() {
         {/* ==== Left Side ==== */}
         <div>
           <h3 className="mb-2 text-xl mt-6">
-            <span>⬤</span> Tôi học lập trình như thế nào? 🤔
+            <span>⬤</span> Tôi học lập trình như thế nào? 
           </h3>
           <p className="text-slate-800/90 text-pretty">
-             Tôi luôn tò mò về cách các trang web, phần mềm và hệ thống bảo mật vận hành – từ những nguyên tắc cơ bản trong lập trình đến các cơ chế bảo mật nâng cao. 
-             Chính vì vậy, mình đã theo đuổi Reverse Engineering & Security Research, khám phá cách phần mềm hoạt động từ bên trong, phân tích lỗ hổng và tìm ra những giải pháp tối ưu.
+             Tôi luôn bị cuốn hút bởi cách các hệ thống, phần mềm và lớp bảo mật vận hành – từ những dòng lệnh nền tảng cho đến những cơ chế phòng thủ phức tạp nhất. Chính sự tò mò đó đã dẫn tôi đến con đường Reverse Engineering và Security Research: bóc tách phần mềm từ bên trong, phơi bày những điểm yếu tiềm ẩn và tìm ra giải pháp tinh gọn, hiệu quả nhất.
           </p>
 
           <h3 className="mb-2 text-xl mt-6">
@@ -71,8 +70,9 @@ function About() {
             src={ChillImg}
           />
           <p className="text-slate-800/90 text-pretty">
-            Đây là trang cá nhân nơi mình chia sẻ về hành trình, kỹ năng và những dự án đã thực hiện trong lĩnh vực Reverse Engineering & Security Research, cũng như Data Analysis & Visualization. Tại đây, bạn có thể tìm hiểu về kinh nghiệm, chuyên môn của mình, cũng như cách mình tiếp cận và giải quyết các vấn đề kỹ thuật.
-             Ngoài việc giới thiệu bản thân, mình cũng mong muốn tạo ra một không gian để kết nối, trao đổi ý tưởng và học hỏi từ cộng đồng. Nếu bạn quan tâm đến các chủ đề liên quan hoặc tìm kiếm cơ hội hợp tác, đừng ngần ngại liên hệ! 🚀
+         Đây là nơi tôi ghi lại hành trình học tập và thực hành trong lập trình, giải thuật, Reverse Engineering & Security Research, cũng như phân tích và trực quan hóa dữ liệu. Tôi quan tâm đến cách hệ thống vận hành ở bên trong và cách những lớp bảo mật thực sự hoạt động.
+
+Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường tôi đi, không hơn. Nếu bạn có cùng mối quan tâm, chúng ta có thể trao đổi – còn nếu không, hãy cứ coi như lướt qua.
           </p>
         </div>
 

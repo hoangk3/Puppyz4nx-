@@ -13,14 +13,7 @@ const DONATION_DATA = {
       qrCode:
         "https://files.catbox.moe/id2nbc.jpg",
     },
-    {
-      id: 2,
-      name: "MB Bank",
-      accountNumber: "0961834922",
-      accountHolder: "Nguyễn Thị Diệu Châu",
-      qrCode:
-        "https://files.catbox.moe/kw3cih.jpg",
-    },
+
   ],
 };
 

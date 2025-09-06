@@ -114,8 +114,7 @@ function UserInfo() {
             </h2>
             <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
             <div className='font-semibold text-justify'>
-              Chào mọi người! Mình là Hoàng hay Puppy_z4nx (<span className='text-cyan-800'>200x</span>), là Software developer mảng chính mình đang theo là Reverse Engineer hay Security Researcher. Mình đang tìm kiếm những cơ hội mới để mở rộng kiến thức,
-              thử thách bản thân và áp dụng những gì đã học vào thực tế.{" "}
+              Tôi Puppy_z4nx (<span className='text-cyan-800'>200x</span>), một Software Developer tập trung vào Reverse Engineering và Security Research. Tôi quan tâm đến cách hệ thống vận hành từ bên trong, khai thác điểm yếu và biến kiến thức thành kinh nghiệm thực tế. 
               <Link className='text-slate-600 underline' to='/skills'>
                 Xem thêm không nhỉ ?
               </Link>{" "}
@@ -254,9 +253,7 @@ function UserInfo() {
           </h2>
           <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
           <div className='font-semibold text-justify'>
-            Chào mọi người! Mình là Hoàng (<span className='text-cyan-600'>200x</span>), là Software developer mảng chính mình đang theo là Reverse Engineer hay Security Researcher. Mình đang tìm kiếm những cơ hội mới để mở rộng kiến thức,
-              thử thách bản thân và áp dụng những gì đã học vào thực tế
-              .{" "}
+          Tôi là Puppy_z4nx (<span className='text-cyan-800'>200x</span>), một Software Developer tập trung vào Reverse Engineering và Security Research. Tôi quan tâm đến cách hệ thống vận hành từ bên trong, khai thác điểm yếu và biến kiến thức thành kinh nghiệm thực tế. 
             <Link className='text-slate-600 underline' to='/skills'>
               Xem thêm không nhỉ
             </Link>{" "}
