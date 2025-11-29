@@ -36,7 +36,7 @@ function Header() {
           </a>
         </Tippy>
         <Tippy animation='scale' content='Facebook'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='https://www.facebook.com/Puppy0000/'>
+          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='https://www.facebook.com/Puppyz4nx'>
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </Tippy>
@@ -46,3 +46,4 @@ function Header() {
 }
 
 export default Header;
+
