@@ -1,0 +1,555 @@
+{
+  "mouseover": [
+    {
+      "selector": "#live2d",
+      "text": [
+        "Hey, what are you doing? Take your hand away~~",
+        "Y-You moved the mouse to the wrong place!",
+        "What are you trying to do?",
+        "Meow meow meow?",
+        "So scary (ノ≧∇≦)ノ",
+        "Molestation! Help!",
+        "If you keep this up, I’ll have to use force!",
+        "I’m going to get angry!",
+        "Don’t touch me like that!",
+        "Y-You’re really shameless!",
+        "Hentai!"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-hitokoto",
+      "text": [
+        "Guess what I’m going to say?",
+        "I learned a lot of life experience from the Frog Prince."
+      ]
+    },
+    {
+      "selector": "#waifu-tool-asteroids",
+      "text": [
+        "Wanna play Asteroids?",
+        "This button says “Do Not Click”.",
+        "What, do you want to play a game with me?",
+        "I heard this can make you dance!"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-switch-model",
+      "text": [
+        "Don’t you love me anymore? Wuwuwu~",
+        "Do you want to meet my big sister?",
+        "Want to see my little sister?",
+        "Switch the mascot?"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-switch-texture",
+      "text": [
+        "Do you like dress-up play?",
+        "What role should I play this time?",
+        "Transformation!",
+        "Let’s see what happens next!"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-photo",
+      "text": [
+        "You want to take a photo of me? One, two, three~ cheese~",
+        "How about taking a picture together?",
+        "Just keep smiling~"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-info",
+      "text": [
+        "Want to know more about me?",
+        "This records my moving history.",
+        "What do you want to know about me?"
+      ]
+    },
+    {
+      "selector": "#waifu-tool-quit",
+      "text": [
+        "Is it time to say goodbye?",
+        "Wuwu QAQ, see you next time…",
+        "Don’t abandon me…",
+        "Will we meet again…?",
+        "Hmph, you’ll regret this!"
+      ]
+    },
+    {
+      "selector": ".menu-item-home a",
+      "text": [
+        "Click to go to the homepage. Use the browser back button to return.",
+        "Click here to return to the homepage!",
+        "Let’s go back to the homepage."
+      ]
+    },
+    {
+      "selector": ".menu-item-about a",
+      "text": [
+        "Do you want to know who my owner is?",
+        "There are some secrets about my owner here. Want to take a look?",
+        "Owner spotted here!"
+      ]
+    },
+    {
+      "selector": ".menu-item-tags a",
+      "text": [
+        "Click to view article tags!",
+        "Click here to see all tags."
+      ]
+    },
+    {
+      "selector": ".menu-item-categories a",
+      "text": [
+        "All articles are nicely categorized~",
+        "Click to view article categories."
+      ]
+    },
+    {
+      "selector": ".menu-item-archives a",
+      "text": [
+        "Scrolling pages is annoying? Check the archives instead.",
+        "All articles are neatly organized here!"
+      ]
+    },
+    {
+      "selector": ".menu-item-friends a",
+      "text": [
+        "These are my friendsヾ(◍°∇°◍)ﾉﾞ",
+        "Want to visit some big shots?",
+        "Want to visit my friends?"
+      ]
+    },
+    {
+      "selector": ".menu-item-search a",
+      "text": [
+        "Can’t find what you want? Try searching!",
+        "What are you looking for? Need help?"
+      ]
+    },
+    {
+      "selector": ".menu-item a",
+      "text": [
+        "Come see what’s here!"
+      ]
+    },
+    {
+      "selector": ".site-author",
+      "text": [
+        "Is my owner handsome?",
+        "This is my owner (*´∇｀*)"
+      ]
+    },
+    {
+      "selector": ".site-state",
+      "text": [
+        "These are article statistics~",
+        "Want to click in and see?"
+      ]
+    },
+    {
+      "selector": ".feed-link a",
+      "text": [
+        "You can subscribe via RSS here!",
+        "Use a feed reader to know when the blog updates."
+      ]
+    },
+    {
+      "selector": ".cc-opacity, .post-copyright-author",
+      "text": [
+        "Remember to follow reposting rules.",
+        "All articles use CC BY-NC-SA 4.0 license~",
+        "Check the copyright before reposting."
+      ]
+    },
+    {
+      "selector": ".links-of-author",
+      "text": [
+        "These are my owner’s permanent links.",
+        "Here is my owner’s contact info!"
+      ]
+    },
+    {
+      "selector": ".followme",
+      "text": [
+        "Scan with your phone to continue reading~",
+        "Scan it and open a new world!"
+      ]
+    },
+    {
+      "selector": ".fancybox img, img.medium-zoom-image",
+      "text": [
+        "Click the image to enlarge it!"
+      ]
+    },
+    {
+      "selector": ".copy-btn",
+      "text": [
+        "Click to copy the code."
+      ]
+    },
+    {
+      "selector": ".highlight .table-container, .gist",
+      "text": [
+        "GitHub! I’m a beginner!",
+        "PHP is the best language!"
+      ]
+    },
+    {
+      "selector": "a[href^='mailto']",
+      "text": [
+        "I’ll reply to emails promptly!",
+        "Click to send an email~"
+      ]
+    },
+    {
+      "selector": "a[href^='/tags/']",
+      "text": [
+        "Want to check the <span>{text}</span> tag?",
+        "Click to see all posts under this tag!"
+      ]
+    },
+    {
+      "selector": "a[href^='/categories/']",
+      "text": [
+        "Want to view the <span>{text}</span> category?",
+        "Click to see all posts in this category!"
+      ]
+    },
+    {
+      "selector": ".post-title-link",
+      "text": [
+        "Want to read <span>{text}</span>?"
+      ]
+    },
+    {
+      "selector": "a[rel='contents']",
+      "text": [
+        "Click to read the full article."
+      ]
+    },
+    {
+      "selector": "a[itemprop='discussionUrl']",
+      "text": [
+        "Want to check the comments?"
+      ]
+    },
+    {
+      "selector": ".beian a",
+      "text": [
+        "I’m officially registered too.",
+        "My owner is a law-abiding citizen."
+      ]
+    },
+    {
+      "selector": ".container a[href^='http'], .nav-link .nav-text",
+      "text": [
+        "Want to visit <span>{text}</span>?",
+        "Go check out <span>{text}</span>.",
+        "Let’s take a look at <span>{text}</span>."
+      ]
+    },
+    {
+      "selector": ".back-to-top",
+      "text": [
+        "Click to go back to the top!",
+        "Back to the starting point~",
+        "Want to return to the beginning?"
+      ]
+    },
+    {
+      "selector": ".reward-container",
+      "text": [
+        "Am I awesome? Give me a like!",
+        "Want to support me?",
+        "My owner is broke lately, please support him~"
+      ]
+    },
+    {
+      "selector": "#wechat",
+      "text": [
+        "This is my WeChat QR code~"
+      ]
+    },
+    {
+      "selector": "#alipay",
+      "text": [
+        "This is my Alipay!"
+      ]
+    },
+    {
+      "selector": "#bitcoin",
+      "text": [
+        "This is my Bitcoin address!"
+      ]
+    },
+    {
+      "selector": "#needsharebutton-postbottom .btn",
+      "text": [
+        "Good stuff should be shared!",
+        "If this article helped you, share it with others!"
+      ]
+    },
+    {
+      "selector": ".need-share-button_weibo",
+      "text": [
+        "Weibo? Let’s share it!"
+      ]
+    },
+    {
+      "selector": ".need-share-button_wechat",
+      "text": [
+        "Share to WeChat!"
+      ]
+    },
+    {
+      "selector": ".need-share-button_douban",
+      "text": [
+        "Sharing on Douban sounds good too!"
+      ]
+    },
+    {
+      "selector": ".need-share-button_qqzone",
+      "text": [
+        "QQ Zone, one-click share!"
+      ]
+    },
+    {
+      "selector": ".need-share-button_twitter",
+      "text": [
+        "Twitter? Does that even exist?"
+      ]
+    },
+    {
+      "selector": ".need-share-button_facebook",
+      "text": [
+        "Hmm… Facebook doesn’t seem to exist either?"
+      ]
+    },
+    {
+      "selector": ".post-nav-item a[rel='next']",
+      "text": [
+        "Let’s read the next article.",
+        "Click to read the next post!",
+        "Want to move to the next article?"
+      ]
+    },
+    {
+      "selector": ".post-nav-item a[rel='prev']",
+      "text": [
+        "Let’s read the previous article.",
+        "Click to read the previous post!",
+        "Want to go back to the previous article?"
+      ]
+    },
+    {
+      "selector": ".extend.next",
+      "text": [
+        "Go to the next page.",
+        "Click to move forward!",
+        "Want to turn to the next page?"
+      ]
+    },
+    {
+      "selector": ".extend.prev",
+      "text": [
+        "Go to the previous page.",
+        "Click to go back!",
+        "Want to turn back a page?"
+      ]
+    },
+    {
+      "selector": "input.vnick",
+      "text": [
+        "How should I address you?",
+        "Leave your name!"
+      ]
+    },
+    {
+      "selector": ".vmail",
+      "text": [
+        "Leave your email or you’ll be an avatar-less user!",
+        "Remember to set your Gravatar!",
+        "Leave your email so I can notify you!"
+      ]
+    },
+    {
+      "selector": ".vlink",
+      "text": [
+        "Tell me where you live so I can visit!"
+      ]
+    },
+    {
+      "selector": ".veditor",
+      "text": [
+        "Want to leave a comment?",
+        "Say something?",
+        "Like the blog? Leave a message!"
+      ]
+    },
+    {
+      "selector": ".vcontrol a",
+      "text": [
+        "Are you familiar with Markdown?",
+        "Use Markdown to make comments prettier~"
+      ]
+    },
+    {
+      "selector": ".vemoji-btn",
+      "text": [
+        "Want to insert a cute emoji?",
+        "How about adding an emoji?"
+      ]
+    },
+    {
+      "selector": ".vpreview-btn",
+      "text": [
+        "Want to preview your comment?",
+        "See how much negative entropy your comment has!"
+      ]
+    },
+    {
+      "selector": ".vsubmit",
+      "text": [
+        "Comments are not moderated, be responsible!",
+        "Submit now? Please wait patiently!"
+      ]
+    },
+    {
+      "selector": ".vcontent",
+      "text": [
+        "Wow, check out this amazing comment!",
+        "If you have questions, leave a comment!"
+      ]
+    }
+  ],
+  "click": [
+    {
+      "selector": "#live2d",
+      "text": [
+        "Y-You touched me by accident, right…?",
+        "What is a lolicon?",
+        "Have you seen my teddy bear?",
+        "Touch me again and I’ll call the police! ⌇●﹏●⌇",
+        "Hello 911? There’s a pervert touching me!",
+        "Stop touching me or I’ll tell my wife to beat you!",
+        "Why are you touching me! I’ll bite you!",
+        "Don’t touch me! What’s so fun about that!"
+      ]
+    },
+    {
+      "selector": ".veditor",
+      "text": [
+        "Want to complain about something?",
+        "Please fill it out carefully~",
+        "Anything you want to say?"
+      ]
+    },
+    {
+      "selector": ".vsubmit",
+      "text": [
+        "Enter the captcha to submit your comment~"
+      ]
+    }
+  ],
+  "seasons": [
+    {
+      "date": "01/01",
+      "text": "It’s <span>New Year’s Day</span>! A new year begins — it’s {year} now~"
+    },
+    {
+      "date": "02/14",
+      "text": "Another <span>Valentine’s Day</span> — did you find a partner in {year}?"
+    },
+    {
+      "date": "03/08",
+      "text": "Today is <span>International Women’s Day</span>!"
+    },
+    {
+      "date": "03/12",
+      "text": "Today is <span>Tree Planting Day</span>, protect the environment!"
+    },
+    {
+      "date": "04/01",
+      "text": "Let me tell you a secret~ <span>Today is April Fools’ Day, don’t get fooled~</span>"
+    },
+    {
+      "date": "05/01",
+      "text": "It’s <span>Labor Day</span> — any plans for the holiday?"
+    },
+    {
+      "date": "06/01",
+      "text": "It’s <span>Children’s Day</span> — happy times are short, wish we could stay young forever…"
+    },
+    {
+      "date": "09/03",
+      "text": "<span>Victory Day of the War of Resistance Against Japan</span> — remember history, cherish peace."
+    },
+    {
+      "date": "09/10",
+      "text": "It’s <span>Teachers’ Day</span>, remember to greet your teachers!"
+    },
+    {
+      "date": "10/01",
+      "text": "<span>National Day</span> is here — celebrating our motherland!"
+    },
+    {
+      "date": "11/05-11/12",
+      "text": "Who are you spending <span>Singles’ Day</span> with this year~?"
+    },
+    {
+      "date": "12/20-12/31",
+      "text": "It’s <span>Christmas</span> — my owner must be shopping like crazy again~"
+    }
+  ],
+  "time": [
+    {
+      "hour": "6-7",
+      "text": "Good morning! A day’s plan starts in the morning — a beautiful day begins~"
+    },
+    {
+      "hour": "8-11",
+      "text": "Good morning! Work going well? Don’t sit too long, get up and move around!"
+    },
+    {
+      "hour": "12-13",
+      "text": "It’s noon — lunch time after a busy morning!"
+    },
+    {
+      "hour": "14-17",
+      "text": "Afternoons make you sleepy — did you finish today’s exercise goal?"
+    },
+    {
+      "hour": "18-19",
+      "text": "Evening time! The sunset outside is beautiful — nothing beats the evening glow~"
+    },
+    {
+      "hour": "20-21",
+      "text": "Good evening! How was your day?"
+    },
+    {
+      "hour": "22-23",
+      "text": [
+        "It’s so late already, get some rest — good night~",
+        "Take care of your eyes late at night!"
+      ]
+    },
+    {
+      "hour": "0-5",
+      "text": "Are you a night owl? Staying up this late — can you wake up tomorrow?"
+    }
+  ],
+  "message": {
+    "default": [
+      "Long time no see, time really flies…",
+      "You big meanie! You ignored me for so long, wuwuwu~",
+      "Hi~ come play with me!",
+      "Punching your chest with tiny fists!",
+      "Remember to bookmark my home!"
+    ],
+    "console": "Haha, you opened the console — trying to see my little secrets?",
+    "copy": "What did you copy? Remember to credit the source when reposting!",
+    "visibilitychange": "Wow, you’re finally back~"
+  }
+}

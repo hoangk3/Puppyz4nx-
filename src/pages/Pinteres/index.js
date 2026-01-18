@@ -3,7 +3,7 @@ import { pinterest } from "../../config/Pinteres";
 import { Skeleton } from "../../components/ui/Skeleton";
 
 export const Heading = ({ name, emoji, sId }) => (
-  <h2 id={sId} className="text-4xl font-bold">
+  <h2 id={sId} className="text-4xl font-bold text-black">
     {emoji} {name}
   </h2>
 );
@@ -13,19 +13,23 @@ function PinterestPage() {
   const [loadedImages, setLoadedImages] = useState({});
 
   const handleImageLoad = (rank) => {
-    setLoadedImages(prev => ({ ...prev, [rank]: true }));
+    setLoadedImages((prev) => ({ ...prev, [rank]: true }));
   };
 
   return (
     <div className="p-4">
       <Heading name="Anime" emoji="🌟" sId="Anime" />
-      <p className="mt-4 text-neutral-400">
-        Tham khảo <span className="underline underline-offset-2">Top Anime</span> Hay Nhất{" "}
-        <span className="text-neutral-500">Đối Với Tôi...</span>
+
+      <p className="mt-4 text-black">
+         Top Best{" "}
+        <span className="underline underline-offset-2 text-black">
+           Anime
+        </span>{" "}
+         <span className="text-black"> For me...</span>
       </p>
 
       <div className="fade-in-left mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-[896px]">
-        {pinterest.map(({ rank, name, description, image, url }) => (
+        {pinterest.map(({ rank, name, description, image }) => (
           <a
             key={rank}
             href="#!"
@@ -33,23 +37,31 @@ function PinterestPage() {
               e.preventDefault();
               setModalImage(image);
             }}
-            className="group relative flex h-36 overflow-hidden rounded-lg px-4 duration-300 before:absolute before:inset-0 before:z-10 before:bg-black before:opacity-0 before:transition before:duration-150 hover:h-48 hover:before:opacity-50 sm:px-8"
+            className="group relative flex h-36 overflow-hidden rounded-lg px-4 duration-300
+              before:absolute before:inset-0 before:z-10 before:bg-black
+              before:opacity-0 before:transition before:duration-150
+              hover:h-48 hover:before:opacity-40 sm:px-8"
           >
             {!loadedImages[rank] && (
               <Skeleton src={image} className="absolute inset-0" />
             )}
+
             <img
               src={image}
               alt={name}
               onLoad={() => handleImageLoad(rank)}
-              className={`absolute left-0 top-0 h-full w-full rounded-lg bg-neutral-900 object-cover duration-150 group-hover:scale-[1.02] ${loadedImages[rank] ? 'opacity-100' : 'opacity-0'}`}
+              className={`absolute left-0 top-0 h-full w-full rounded-lg bg-neutral-900 object-cover duration-150 group-hover:scale-[1.02]
+                ${loadedImages[rank] ? "opacity-100" : "opacity-0"}`}
             />
+
             <div className="z-20 w-full self-end mb-4 scale-95 space-y-1 opacity-0 duration-300 group-hover:scale-100 group-hover:opacity-100">
-              <p className="text-3xl font-bold text-neutral-50">
-                <span className="text-neutral-300">{rank} </span>
+              <p className="text-3xl font-bold text-black">
+                <span className="text-black">{rank} </span>
                 {name}
               </p>
-              <p className="text-base text-neutral-300 md:text-lg"># {description}</p>
+              <p className="text-base text-black md:text-lg">
+                # {description}
+              </p>
             </div>
           </a>
         ))}
@@ -69,7 +81,7 @@ function PinterestPage() {
           />
           <button
             onClick={() => setModalImage(null)}
-            className="absolute top-4 right-4 text-white text-2xl font-bold"
+            className="absolute top-4 right-4 text-black bg-white/90 rounded-full px-3 py-1 text-2xl font-bold"
           >
             &times;
           </button>

@@ -1,7 +1,7 @@
 
 const routes = {
   home: "/",
-  goal: "/goal",        
+  goal: "/goal",
   skill: "/skills",
   games: "/games",
   projects: "/projects",
@@ -10,6 +10,8 @@ const routes = {
   projectDetails: "/projects/:projectName",
   notfound: "/*",
   Donate: "/donate",
+  hentai: "/hentai",
+  mygf: "/my-gf",
 };
 
 

@@ -8,6 +8,9 @@ import Projects from "../pages/Projects";
 import ProjectDetails from "../pages/Projects/projectsInfo";
 import pinterest from "../pages/Pinteres";
 import DonatePage from "../pages/Donate/DonatePage";
+import Hentailist from "../pages/HentaiList"
+import MyGf from "../pages/MyGf";
+
 const publicRoutes = [
   { path: config.routes.home, component: About },
   { path: config.routes.skill, component: Skills },
@@ -18,6 +21,8 @@ const publicRoutes = [
   { path: config.routes.projectDetails, component: ProjectDetails },
   { path: config.routes.notfound, component: NotFound },
   { path: config.routes.Donate, component: DonatePage },
+  { path: config.routes.hentai, component: Hentailist },
+  { path: config.routes.mygf, component: MyGf }
 ];
 const privateRoutes = [];
 

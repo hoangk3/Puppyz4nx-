@@ -20,7 +20,7 @@ import "swiper/css/effect-cards";
 import ChillImg from "../../assets/imgs/images.jpg";
 import Img from "../../components/img";
 
-// ✅ Import ảnh chứng chỉ
+// ✅ Import certificate images
 import Cert1 from "../../assets/gallery/images1.jpg";
 import Cert2 from "../../assets/gallery/images2.jpg";
 import Cert3 from "../../assets/gallery/images3.jpg";
@@ -34,7 +34,6 @@ function About() {
   const [preview, setPreview] = useState(null);
   const [activeCert, setActiveCert] = useState(null);
 
-  // ✅ Có cả tên chứng chỉ
   const certImages = [
     { src: Cert1, name: "Images 1" },
     { src: Cert2, name: "Images 2" },
@@ -55,14 +54,15 @@ function About() {
         {/* ==== Left Side ==== */}
         <div>
           <h3 className="mb-2 text-xl mt-6">
-            <span>⬤</span> Tôi học lập trình như thế nào? 
+            <span>⬤</span> How did I start learning programming?
           </h3>
           <p className="text-slate-800/90 text-pretty">
-             Tôi luôn bị cuốn hút bởi cách các hệ thống, phần mềm và lớp bảo mật vận hành – từ những dòng lệnh nền tảng cho đến những cơ chế phòng thủ phức tạp nhất. Chính sự tò mò đó đã dẫn tôi đến con đường Reverse Engineering và Security Research: bóc tách phần mềm từ bên trong, phơi bày những điểm yếu tiềm ẩn và tìm ra giải pháp tinh gọn, hiệu quả nhất.
+            I’ve always been fascinated by how systems, software, and security layers actually work — from low-level instructions to complex defense mechanisms. 
+            That curiosity gradually led me to Reverse Engineering and Security Research: analyzing software from the inside, uncovering hidden weaknesses, and finding practical, efficient solutions.
           </p>
 
           <h3 className="mb-2 text-xl mt-6">
-            <span>⬤</span> Trang web này để làm gì? 🍜
+            <span>⬤</span> What is this website for? 🍜
           </h3>
           <Img
             className="drag-none size-40 sm:size-44 md:size-48 lg:size-60 float-right mb-1 ml-2 select-none rounded-md border-4 border-pink-600/50 bg-neutral-800"
@@ -70,9 +70,10 @@ function About() {
             src={ChillImg}
           />
           <p className="text-slate-800/90 text-pretty">
-         Đây là nơi tôi ghi lại hành trình học tập và thực hành trong lập trình, giải thuật, Reverse Engineering & Security Research, cũng như phân tích và trực quan hóa dữ liệu. Tôi quan tâm đến cách hệ thống vận hành ở bên trong và cách những lớp bảo mật thực sự hoạt động.
-
-Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường tôi đi, không hơn. Nếu bạn có cùng mối quan tâm, chúng ta có thể trao đổi – còn nếu không, hãy cứ coi như lướt qua.
+            This website is where I document my learning journey and hands-on practice in programming, data structures and algorithms, Reverse Engineering, and Security Research, as well as system analysis and data visualization.
+            <br /><br />
+            Everything here is simply a collection of personal notes along my path — nothing more. 
+            If you share similar interests, feel free to connect. If not, you’re still welcome to take a look and move on.
           </p>
         </div>
 
@@ -116,7 +117,7 @@ Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường t�
                 <div className="flex-1">
                   <h5 className="text-sm">THPT Tam Dương</h5>
                   <div className="flex justify-between text-xs text-slate-700">
-                    <p>Normal student</p>
+                    <p>Student</p>
                     <p>2024 - 2027</p>
                   </div>
                 </div>
@@ -127,7 +128,7 @@ Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường t�
                   className="w-full py-2 flex text-sm hover:bg-slate-700 items-center gap-2 justify-center text-slate-100 bg-slate-800 rounded-lg transition"
                 >
                   <FontAwesomeIcon icon={faFaceGrinBeamSweat} />
-                  <span>Web trường</span>
+                  <span>School Website</span>
                 </a>
               </div>
             </div>
@@ -135,8 +136,7 @@ Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường t�
             {/* Certifications */}
             <div className="p-4 rounded-lg border-[2px] bg-slate-100 border-slate-200 shadow-sm hover:shadow-md transition">
               <p className="text-lg font-bold text-neutral-700 mb-4">
-                Images /{" "}
-                <span className="text-pink-600">{activeCert}</span>
+                Images / <span className="text-pink-600">{activeCert}</span>
               </p>
               <Swiper
                 effect={"cards"}
@@ -172,7 +172,7 @@ Mọi chia sẻ ở đây chỉ đơn giản là ghi chú trên con đường t�
         </div>
       </div>
 
-      {/* ===== Preview Modal with Animation ===== */}
+      {/* ===== Preview Modal ===== */}
       <AnimatePresence>
         {preview && (
           <motion.div

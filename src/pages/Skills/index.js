@@ -1,3 +1,4 @@
+/* eslint-disable no-script-url */
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as brandStar } from "@fortawesome/free-solid-svg-icons";
@@ -56,83 +57,83 @@ function Skills() {
 
   const skillList = [
     new Skill(
-    "C++",
-    "C++: Ngôn ngữ lập trình mạnh mẽ, hỗ trợ cả lập trình hướng đối tượng và lập trình thủ tục. Thường được dùng trong phát triển phần mềm hệ thống, game, và ứng dụng hiệu năng cao ( đây là ngôn ngữ main của chủ web) ⚡.",
-    cppIcon,
-    [brandStar, brandStar, brandStar, brandStar, brandStar]
-  ),
-    new Skill("HTML", "HTML: (Ngôn ngữ đánh dấu siêu văn bản) là khối xây dựng 🧱 của cách trang web, sử dụng các thẻ để xác định cấu trúc và nội dung.", htmlIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-    ]),
-    new Skill("CSS", "CSS: (Cascading Style Sheets) Ngôn ngữ kiểu tạo bố cục và trình bày cho HTML, giúp nhà phát triển thiết kế trang web hấp dẫn về mặt hình ảnh 🎨.", cssIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-      regularStar,
-    ]),
+      "C++",
+      "C++: A powerful programming language that supports both object-oriented and procedural programming. Commonly used in system software, game development, and high-performance applications (this is the main language of the website owner) ⚡.",
+      cppIcon,
+      [brandStar, brandStar, brandStar, brandStar, brandStar]
+    ),
+    new Skill(
+      "HTML",
+      "HTML: (HyperText Markup Language) is the building block 🧱 of the web, using tags to define the structure and content of web pages.",
+      htmlIcon,
+      [brandStar, brandStar, brandStar, brandStar, regularStar]
+    ),
+    new Skill(
+      "CSS",
+      "CSS: (Cascading Style Sheets) is a styling language used to design layouts and visual presentation for HTML, helping developers create visually appealing websites 🎨.",
+      cssIcon,
+      [brandStar, brandStar, brandStar, regularStar, regularStar]
+    ),
     // eslint-disable-next-line
-    new Skill("JavaScript", "JavaScript: Ngôn ngữ linh hoạt tạo tính tương tác ✨ và động 🥏 cho trang web, mang lại trải nghiệm hấp dẫn cho người dùng.", javascriptIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-    ]),
-    new Skill("TypeScript", "TypeScript: Ngôn ngữ lập trình mạnh mẽ được xây dựng trên JavaScript, cung cấp cho bạn công cụ tốt hơn ở mọi quy mô", typescriptIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-      regularStar,
-    ]),
-    new Skill("Python", "Python:  Ngôn ngữ có hình thức rất sáng sủa, cấu trúc rõ ràng, thuận tiện cho người mới học lập trình và là ngôn ngữ lập trình dễ học", pythonIcon, [
-     brandStar, brandStar, brandStar, brandStar, regularStar
-    ]),
-    new Skill("Tailwind CSS", "Tailwind CSS: Framework CSS ưu tiên tiện ích cho phép các nhà phát triển nhanh chóng xây dựng giao diện người dùng mà không cần rời khỏi HTML của mình.", tailwindIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-      regularStar,
-    ]),
-    new Skill("ReactJS", "ReactJS: Thư viện dành cho giao diện người dùng gốc và web. Xây dựng giao diện người dùng từ các phần riêng lẻ được gọi là các component được viết bằng JavaScript.", reactIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-      regularStar,
-    ]),
-    new Skill("Node.js", "Node.js: Một môi trường chạy JavaScript phía máy chủ 🖥, giúp tạo ra ứng dụng web có khả năng mở rộng và hiệu quả.", nodejsIcon, [brandStar, regularStar, regularStar, regularStar, regularStar]),
+    new Skill(
+      "JavaScript",
+      "JavaScript: A flexible language that adds interactivity ✨ and dynamic behavior 🥏 to websites, creating engaging user experiences.",
+      javascriptIcon,
+      [brandStar, brandStar, brandStar, brandStar, regularStar]
+    ),
+    new Skill(
+      "TypeScript",
+      "TypeScript: A programming language built on top of JavaScript, providing better tooling for large-scale applications.",
+      typescriptIcon,
+      [brandStar, brandStar, brandStar, regularStar, regularStar]
+    ),
+    new Skill(
+      "Python",
+      "Python: A language with clean syntax and clear structure, beginner-friendly and easy to learn, widely used across many domains.",
+      pythonIcon,
+      [brandStar, brandStar, brandStar, brandStar, regularStar]
+    ),
+    new Skill(
+      "Tailwind CSS",
+      "Tailwind CSS: A utility-first CSS framework that allows developers to quickly build user interfaces without leaving their HTML.",
+      tailwindIcon,
+      [brandStar, brandStar, brandStar, regularStar, regularStar]
+    ),
+    new Skill(
+      "ReactJS",
+      "ReactJS: A library for building native and web user interfaces using reusable components written in JavaScript.",
+      reactIcon,
+      [brandStar, brandStar, brandStar, regularStar, regularStar]
+    ),
+    new Skill(
+      "Node.js",
+      "Node.js: A server-side JavaScript runtime 🖥 that enables building scalable and efficient web applications.",
+      nodejsIcon,
+      [brandStar, regularStar, regularStar, regularStar, regularStar]
+    ),
     new Skill(
       "Visual Studio Code",
-      "Visual Studio Code: Một công cụ miễn phí ✨ và mã nguồn mở được phát triển bởi Microsoft. Nó cung cấp nhiều tính năng và tiện ích mở rộng cho nhiều ngôn ngữ lập trình khác nhau.",
+      "Visual Studio Code: A free ✨ and open-source editor developed by Microsoft, offering rich features and extensions for many languages.",
       vscodeIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
-    new Skill("GitHub", "GitHub: Nền tảng cung cấp các công cụ cộng tác và kiểm soát phiên bản, cho phép các nhà phát triển lưu trữ 👩‍💻, đánh giá và quản lý kho mã cho các dự án phần mềm.", githubIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      brandStar,
-      regularStar,
-    ]),
-    new Skill("Notepad++", "Notepad++: Trình soạn thảo văn bản 📝 mã nguồn mở và miễn phí dành cho Windows. Đây là một công cụ nhẹ và nhiều tính năng.", notepadppIcon, [
-      brandStar,
-      brandStar,
-      brandStar,
-      brandStar,
-      brandStar,
-    ]),
+    new Skill(
+      "GitHub",
+      "GitHub: A platform providing collaboration and version control tools, allowing developers to store 👩‍💻, review, and manage code repositories.",
+      githubIcon,
+      [brandStar, brandStar, brandStar, brandStar, regularStar]
+    ),
+    new Skill(
+      "Notepad++",
+      "Notepad++: A free and open-source 📝 text editor for Windows. Lightweight, fast, and packed with useful features.",
+      notepadppIcon,
+      [brandStar, brandStar, brandStar, brandStar, brandStar]
+    ),
   ];
 
   const categories = [
     {
-      name: "Ngôn ngữ",
+      name: "Languages",
       contents: skillList.slice(0, 5),
     },
     {
@@ -140,7 +141,7 @@ function Skills() {
       contents: skillList.slice(5, 7),
     },
     {
-      name: "Công cụ phát triển",
+      name: "Development Tools",
       contents: skillList.slice(7, 11),
     },
   ];
@@ -151,14 +152,25 @@ function Skills() {
         <div className='bg-neutral-800 h-[36px] w-2'></div>
         <h2>Skills 🔍</h2>
       </div>
-      <p>Kỹ năng và công nghệ sử dụng để xây dựng web ( kể cả những thứ Khác). 😊</p>
+      <p>
+        Skills and technologies I use to build websites (including other related
+        tools as well). 😊
+      </p>
       <div className='mt-6'>
         {categories.map((category, index) => (
-          <div className='border-b-slate-600/40 border-b-[1px] cursor-pointer' key={index}>
+          <div
+            className='border-b-slate-600/40 border-b-[1px] cursor-pointer'
+            key={index}
+          >
             <div onClick={() => toggleCategory(index)}>
               <div className='pt-6 pb-4'>
                 <h2 className='text-lg'>
-                  {category.name} {openCategory === index ? <span className='text-cyan-600'>-</span> : "+"}
+                  {category.name}{" "}
+                  {openCategory === index ? (
+                    <span className='text-cyan-600'>-</span>
+                  ) : (
+                    "+"
+                  )}
                 </h2>
               </div>
               {openCategory === index && (

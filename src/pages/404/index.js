@@ -11,12 +11,12 @@ function NotFound() {
     <div className='font-bold text-neutral-800 w-full pb-4'>
       <div className='mb-3 flex text-3xl gap-2 font-bold'>
         <div className='bg-neutral-800 h-[36px] w-2'></div>
-        <h2>Lỗi rồi 😣</h2>
+        <h2>Something went wrong 😣</h2>
       </div>
       <p>
-        Hình như bị sai 🤔 url rồi nhỉ? Trở về{" "}
+        Looks like the URL is incorrect 🤔. Go back to{" "}
         <Link className='text-cyan-600' to='/'>
-          trang chủ
+          home page
         </Link>
       </p>
       <div className='glitchWrapper xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl mt-8'>

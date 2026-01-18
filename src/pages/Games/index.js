@@ -21,24 +21,25 @@ import { fetchNews, fetchCodes } from "../../api/hoyoverse.js";
 
 // Translations (Chinese only)
 const t = {
-  gamesTitle: "Game 🎮",
-  playedGames: "Các Game Tôi Từng Chơi ...✨",
-  topGames: "⬤ Game 🌎 Chơi Nhiều Nhất",
-  allGames: "⬤ Tất Cả 🎏",
-  gameEvents: "⬤ Sự Kiện Chính 🎉",
-  activeCodes: "Code Còn Hạn",
-  inactiveCodes: "Code Hết Hạn",
-  noActiveCodes: "没有可用的激活码",
-  noInactiveCodes: "没有可用的失效码",
-  noEvents: "没有可用的事件",
-  errorLoading: "❌ 加载数据时出错，请重试",
-  copied: "Đã Sao Chép:",
-  viewFull: "Chi Tiết Sự Kiện",
-  noDescription: "此事件没有详细描述。",
-  events: "事件",
-  previous: "Trước",
-  next: "Sau",
+  gamesTitle: "Games 🎮",
+  playedGames: "Games I've Played ... ✨",
+  topGames: "⬤ Most Played Games 🌎",
+  allGames: "⬤ All Games 🎏",
+  gameEvents: "⬤ Major Events 🎉",
+  activeCodes: "Active Codes",
+  inactiveCodes: "Expired Codes",
+  noActiveCodes: "No active codes available",
+  noInactiveCodes: "No expired codes available",
+  noEvents: "No events available",
+  errorLoading: "❌ Failed to load data. Please try again.",
+  copied: "Copied:",
+  viewFull: "View Full Event",
+  noDescription: "This event has no detailed description.",
+  events: "Events",
+  previous: "Previous",
+  next: "Next",
 };
+
 
 const FALLBACK_IMAGE = "https://via.placeholder.com/260x160?text=无图片";
 
@@ -60,7 +61,7 @@ const fmtCountdown = (expiredAt) => {
   if (diff <= 0) return "已过期";
   const days = Math.floor(diff / 86400);
   const hours = Math.floor((diff % 86400) / 3600);
-  return `Còn Lại: ${days}天 ${hours}Giờ`;
+  return `Còn Lại: ${days}天 ${hours}Hour`;
 };
 
 const classNames = (...arr) => arr.filter(Boolean).join(" ");
@@ -472,10 +473,10 @@ function GamesList({ topGames, allGames }) {
         {topGames.map(({ name, time, img, url }) => (
           <div key={name} className="text-center">
             <Tippy
-              content={`${time}Giờ = ${(time / 24).toFixed(2)} Ngày`}
+              content={`${time}Hour = ${(time / 24).toFixed(2)} Ngày`}
               animation="scale"
             >
-              <p className="text-cyan-600 font-medium mb-2">{time}Giờ</p>
+              <p className="text-cyan-600 font-medium mb-2">{time}Hour</p>
             </Tippy>
             <a
               href={url}

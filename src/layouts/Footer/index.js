@@ -17,7 +17,7 @@ function Footer() {
           </a>
         </p>
         <p>
-          <Tippy animation='scale' content='Tôi Học Code ở đâu ? (click)'>
+          <Tippy animation='scale' content='Where i learning ? (click)'>
             <a className='text-cyan-600' href='https://www.w3schools.com/' target='_blank' rel='noopener noreferrer'>
              About My Knowledge ?  <span className='text-neutral-800'>•</span> ✨
             </a>

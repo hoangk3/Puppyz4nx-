@@ -35,7 +35,7 @@ function UserInfo() {
       const userData = response.data.data;
       setUserData(userData);
     } catch (error) {
-      console.error("Lỗi:", error);
+      console.error("Error:", error);
     }
   };
 
@@ -46,7 +46,7 @@ function UserInfo() {
         setWeather(response.data);
       })
       .catch((error) => {
-        console.error("Lỗi:", error);
+        console.error("Error:", error);
       });
   };
 
@@ -54,13 +54,10 @@ function UserInfo() {
     fetchData();
     fetchWeather();
 
-    const intervalId = setInterval(
-      () => {
-        fetchData();
-        fetchWeather();
-      },
-      1 * 60 * 1000
-    );
+    const intervalId = setInterval(() => {
+      fetchData();
+      fetchWeather();
+    }, 1 * 60 * 1000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -114,9 +111,11 @@ function UserInfo() {
             </h2>
             <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
             <div className='font-semibold text-justify'>
-              Tôi Puppy_z4nx (<span className='text-cyan-800'>200x</span>), một Software Developer tập trung vào Reverse Engineering và Security Research. Tôi quan tâm đến cách hệ thống vận hành từ bên trong, khai thác điểm yếu và biến kiến thức thành kinh nghiệm thực tế. 
+              I am Puppy_z4nx (<span className='text-cyan-800'>200x</span>), a Software Developer focused on Reverse Engineering and Security Research. 
+              At the same time, I am pursuing the study of data structures and algorithms. 
+              I am interested in how systems operate internally, exploiting weaknesses and turning knowledge into practical experience.
               <Link className='text-slate-600 underline' to='/skills'>
-                Xem thêm không nhỉ ?
+                Wanna see more?
               </Link>{" "}
               ✒️
             </div>
@@ -139,29 +138,26 @@ function UserInfo() {
         <div className='size-3 rounded-full bg-cyan-500 animate-ping'></div>
       </div>
       <div className='ml-2 cursor-pointer' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <p>Có vẻ cậu ấy đang online</p>
+        <p>It seems like he's online</p>
         {isHovered && (
           <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-50 border-dashed border-cyan-500 border-4'>
-            <p className='font-bold'> đang ở nhà 🏡 hoặc ngoài quán cafe ☕</p>
-            {activities.length === 0 ? (
-              <></>
-            ) : (
-              activities.map((activity) => (
-                <div className='' key={activity.type}>
-                  {activity.type === 0 && (
-                    <p>
-                      ▸ Đang Chơi 🌠: {activity.name} <span className='text-sm text-slate-600'>({formatElapsedTime(elapsedTime)} đã trôi qua)</span>
-                    </p>
-                  )}
-                </div>
-              ))
-            )}
-            {listeningToSpotify && (
-              <div className=''>
-                <p>
-                  ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
-                </p>
+            <p className='font-bold'> Probably at home 🏡 or at a café ☕</p>
+            {activities.map((activity) => (
+              <div key={activity.type}>
+                {activity.type === 0 && (
+                  <p>
+                    ▸ Playing 🌠: {activity.name}{" "}
+                    <span className='text-sm text-slate-600'>
+                      ({formatElapsedTime(elapsedTime)} elapsed)
+                    </span>
+                  </p>
+                )}
               </div>
+            ))}
+            {listeningToSpotify && (
+              <p>
+                ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
+              </p>
             )}
             <CustomStatus customStatus={customStatus} />
           </div>
@@ -176,16 +172,14 @@ function UserInfo() {
         <div className='size-3 rounded-full bg-yellow-500 animate-ping'></div>
       </div>
       <div className='ml-2 cursor-pointer' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <p>Không hoạt động</p>
+        <p>Idle</p>
         {isHovered && (
           <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-100 border-dashed border-cyan-500 border-4'>
-            <p>Có vẻ là 🧩 đang làm việc gì khác</p>
+            <p>Seems to be doing something else 🧩</p>
             {listeningToSpotify && (
-              <div className=''>
-                <p>
-                  ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
-                </p>
-              </div>
+              <p>
+                ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
+              </p>
             )}
             <CustomStatus customStatus={customStatus} />
           </div>
@@ -200,10 +194,10 @@ function UserInfo() {
         <div className='size-3 rounded-full bg-red-600 animate-ping'></div>
       </div>
       <div className='ml-2 cursor-pointer' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <p>Đang offline rồi</p>
+        <p>Offline</p>
         {isHovered && (
           <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-100 border-dashed border-cyan-500 border-4'>
-            <p>Đang ở ngoài 🚪 hoặc đang ngủ 💤</p>
+            <p>Outside 🚪 or sleeping 💤</p>
             <CustomStatus customStatus={customStatus} />
           </div>
         )}
@@ -217,16 +211,14 @@ function UserInfo() {
         <div className='size-3 rounded-full bg-red-900 animate-ping'></div>
       </div>
       <div className='ml-2 cursor-pointer' onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
-        <p>Không muốn bị làm phiền</p>
+        <p>Do Not Disturb</p>
         {isHovered && (
           <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-100 border-dashed border-cyan-500 border-4'>
-            <p>Không muốn bị làm phiền 🚫 đâu!</p>
+            <p>Does not want to be disturbed 🚫</p>
             {listeningToSpotify && (
-              <div className=''>
-                <p>
-                  ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
-                </p>
-              </div>
+              <p>
+                ▸ Spotify 🎶: {listeningToSpotify.details} - {replaceCharacters(listeningToSpotify.state)}
+              </p>
             )}
             <CustomStatus customStatus={customStatus} />
           </div>
@@ -253,27 +245,31 @@ function UserInfo() {
           </h2>
           <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
           <div className='font-semibold text-justify'>
-          Tôi là Puppy_z4nx (<span className='text-cyan-800'>200x</span>), một Software Developer tập trung vào Reverse Engineering và Security Research. Tôi quan tâm đến cách hệ thống vận hành từ bên trong, khai thác điểm yếu và biến kiến thức thành kinh nghiệm thực tế. 
+            I am Puppy_z4nx (<span className='text-cyan-800'>200x</span>), a Software Developer focused on Reverse Engineering and Security Research. 
+            At the same time, I am pursuing the study of data structures and algorithms. 
+            I am interested in how systems operate internally, exploiting weaknesses and turning knowledge into practical experience.
             <Link className='text-slate-600 underline' to='/skills'>
-              Xem thêm không nhỉ
+              Wanna see more?
             </Link>{" "}
             ✒️
           </div>
         </div>
       </div>
-      <div className='font-semibold text-gray-900 mt-4 '>{discord_status === "online" ? online : discord_status === "idle" ? idle : discord_status === "dnd" ? dnd : offline}</div>
+      <div className='font-semibold text-gray-900 mt-4 '>
+        {discord_status === "online" ? online : discord_status === "idle" ? idle : discord_status === "dnd" ? dnd : offline}
+      </div>
       <div>
         <div className='flex items-center'>
           <svg className='w-5 h-5 text-gray-800  -translate-x-[4px] -translate-y-[1px]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'>
             <path fillRule='evenodd' d='M12 2a8 8 0 0 1 6.6 12.6l-.1.1-.6.7-5.1 6.2a1 1 0 0 1-1.6 0L6 15.3l-.3-.4-.2-.2v-.2A8 8 0 0 1 11.8 2Zm3 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' clipRule='evenodd' />
           </svg>
           <div className='font-semibold text-gray-900 cursor-pointer' onMouseEnter={() => setIsWeather(true)} onMouseLeave={() => setIsWeather(false)}>
-            <p>Vĩnh Phúc, Việt Nam</p>
+            <p>Vĩnh Phúc, Vietnam</p>
             {isWeather && (
               <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-100 border-dashed border-cyan-500 border-4'>
-                <p>⛺ Thành phố: {weather.name}</p>
-                <p>⛅ Nhiệt độ: {weather.main.temp} ºC</p>
-                <p>🚿 Độ ẩm: {weather.main.humidity}%</p>
+                <p>⛺ City: {weather.name}</p>
+                <p>⛅ Temperature: {weather.main.temp} ºC</p>
+                <p>🚿 Humidity: {weather.main.humidity}%</p>
               </div>
             )}
           </div>

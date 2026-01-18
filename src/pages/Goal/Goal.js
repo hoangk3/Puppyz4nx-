@@ -3,15 +3,15 @@ import React from "react";
 
 function Goal() {
   const achievements = [
-    "chủ website loser nên k có gì nổi bật",
+    "Owner of a loser website, so nothing impressive yet",
   ];
 
   const upcomingGoals = [
-    "Cố gắng cải thiện các môn học ở lớp ",
-    "Noob to Pro giải thuật",
-    "Chạm cỏ nhiều hơn",
-    "try hard vài game fps",
-    "Tăng cân",
+    "Try to improve school subjects",
+    "From noob to pro in data structures & algorithms",
+    "Touch grass more often",
+    "Try-hard a few FPS games",
+    "Gain some weight",
   ];
 
   return (
@@ -22,7 +22,7 @@ function Goal() {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <h3 className="text-xl font-semibold text-green-600 mb-4">
-            ✅ Thành tựu đạt được
+            ✅ Achievements
           </h3>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             {achievements.map((item, index) => (
@@ -34,7 +34,7 @@ function Goal() {
         </div>
         <div>
           <h3 className="text-xl font-semibold text-blue-600 mb-4">
-            🚀 Mục tiêu sắp tới
+            🚀 Upcoming Goals
           </h3>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             {upcomingGoals.map((item, index) => (
