@@ -8,16 +8,16 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   return (
-    <div className='p-5 md:rounded-xl bg-white/40 shadow-sm text-neutral-800'>
+    <div className='p-5 md:rounded-xl bg-white/40 shadow-sm text-neutral-800 animate-fadeIn'>
       <Discord></Discord>
       <div className='flex mt-4 gap-2 text-xl'>
         <Tippy animation='scale' content='Gmail'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='phanduyhoang123456@gmail.com'>
+          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='mailto:phanduyhoang123456@gmail.com'>
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </Tippy>
         <Tippy animation='scale' content='Github'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='https://github.com/hoangk3'>
+          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://github.com/hoangk3'>
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </Tippy>
@@ -25,18 +25,18 @@ function Header() {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500'
+            className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow'
             href='https://discord.com/users/789428736868876298'>
             <FontAwesomeIcon icon={faDiscord} />
           </a>
         </Tippy>
         <Tippy animation='scale' content='Youtube'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA'>
+          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA'>
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </Tippy>
         <Tippy animation='scale' content='Facebook'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-200 size-[38px] items-center flex justify-center hover:bg-cyan-500' href='https://www.facebook.com/Puppyz4nx'>
+          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://www.facebook.com/Puppyz4nx'>
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </Tippy>

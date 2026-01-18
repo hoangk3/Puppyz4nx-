@@ -164,11 +164,10 @@ function EventPreview({ event, onClose }) {
           )}
           {event.is_active !== undefined && (
             <span
-              className={`ml-2 inline-block text-xs px-3 py-1 rounded-full ${
-                event.is_active
-                  ? "bg-green-100 text-green-800"
-                  : "bg-red-100 text-red-800"
-              }`}
+              className={`ml-2 inline-block text-xs px-3 py-1 rounded-full ${event.is_active
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+                }`}
             >
               {event.is_active ? "Đang Hoạt Động" : "Đang Hoạt Động"}
             </span>
@@ -203,28 +202,28 @@ function EventPreview({ event, onClose }) {
         {(event.characters?.length > 0 ||
           event.weapons?.length > 0 ||
           event.light_cones?.length > 0) && (
-          <div className="mb-6">
-            <h4 className="text-sm font-semibold mb-2">特色物品:</h4>
-            <ul className="text-sm text-slate-600 list-disc pl-5 space-y-1">
-              {event.characters?.map((char, i) => (
-                <li key={`char-${i}`}>
-                  {char.name}{" "}
-                  ({char.rarity}★{char.element ? `, ${char.element}` : ""})
-                </li>
-              ))}
-              {event.weapons?.map((weapon, i) => (
-                <li key={`weapon-${i}`}>
-                  {weapon.name} ({weapon.rarity}★)
-                </li>
-              ))}
-              {event.light_cones?.map((lc, i) => (
-                <li key={`lc-${i}`}>
-                  {lc.name} ({lc.rarity}★)
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+            <div className="mb-6">
+              <h4 className="text-sm font-semibold mb-2">特色物品:</h4>
+              <ul className="text-sm text-slate-600 list-disc pl-5 space-y-1">
+                {event.characters?.map((char, i) => (
+                  <li key={`char-${i}`}>
+                    {char.name}{" "}
+                    ({char.rarity}★{char.element ? `, ${char.element}` : ""})
+                  </li>
+                ))}
+                {event.weapons?.map((weapon, i) => (
+                  <li key={`weapon-${i}`}>
+                    {weapon.name} ({weapon.rarity}★)
+                  </li>
+                ))}
+                {event.light_cones?.map((lc, i) => (
+                  <li key={`lc-${i}`}>
+                    {lc.name} ({lc.rarity}★)
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         {event.url && (
           <a
             href={event.url}
@@ -254,12 +253,12 @@ function CodeCard({ data, onCopy, isCopied }) {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
+      whileHover={{ scale: 1.05, y: -5 }}
+      whileTap={{ scale: 0.95 }}
       className={classNames(
-        "bg-white rounded-2xl shadow-lg p-4 w-[245px] text-left hover:ring-2 transition",
-        data.is_active ? "ring-green-400" : "ring-red-400",
-        isCopied ? "bg-yellow-50" : ""
+        "p-5 glass-card shadow-lg text-left transition-all duration-300",
+        data.is_active ? "border-l-4 border-green-400" : "border-l-4 border-red-400",
+        isCopied ? "bg-yellow-100/30" : ""
       )}
     >
       <div className="flex items-center justify-between gap-3">
@@ -295,9 +294,9 @@ function CodeCard({ data, onCopy, isCopied }) {
 function EventCard({ data, onClick }) {
   return (
     <motion.div
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-2xl shadow-lg p-4 w-[250px] text-left hover:ring-2 ring-cyan-600 transition cursor-pointer"
+      whileHover={{ scale: 1.05, y: -5 }}
+      whileTap={{ scale: 0.95 }}
+      className="glass-card shadow-lg p-4 text-left transition-all duration-300 cursor-pointer overflow-hidden border border-white/20"
       onClick={() => onClick(data)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -327,11 +326,10 @@ function EventCard({ data, onClick }) {
         )}
         {data.is_active !== undefined && (
           <span
-            className={`ml-2 inline-block text-xs px-3 py-1 rounded-full ${
-              data.is_active
-                ? "bg-green-100 text-green-800"
-                : "bg-red-100 text-red-800"
-            }`}
+            className={`ml-2 inline-block text-xs px-3 py-1 rounded-full ${data.is_active
+              ? "bg-green-100 text-green-800"
+              : "bg-red-100 text-red-800"
+              }`}
           >
             {data.is_active ? "Đang Tiến Hành" : "Đang Tiến Hành"}
           </span>
@@ -350,9 +348,8 @@ function CodesSection({ title, filter, items, loading, onCopy, copiedCode }) {
   return (
     <div>
       <h4
-        className={`text-xl font-semibold mb-4 ${
-          filter ? "text-green-600" : "text-red-600"
-        }`}
+        className={`text-xl font-semibold mb-4 ${filter ? "text-green-600" : "text-red-600"
+          }`}
       >
         {title}
       </h4>
@@ -585,13 +582,14 @@ function GamesDashboard({
   };
 
   return (
-    <div className="bg-slate-50 p-8 rounded-2xl shadow-md mt-10">
-      <h3 className="mb-6 text-2xl font-semibold text-cyan-600">
+    <div className="p-8 glass-panel shadow-lg mt-10 animate-fadeIn">
+      <h3 className="mb-6 text-3xl font-bold text-cyan-500 flex items-center gap-2 animate-fadeInUp">
+        <span className="bg-cyan-500 w-2 h-8 rounded-full inline-block"></span>
         {t.gameEvents}
       </h3>
 
       {/* Game Tabs */}
-      <div className="flex flex-wrap gap-4 mb-6 justify-center md:justify-start">
+      <div className="flex flex-wrap gap-4 mb-8 justify-center md:justify-start animate-fadeInUp" style={{ animationDelay: '100ms', animationFillMode: 'both' }}>
         {GAME_TABS.map((t) => (
           <motion.button
             key={t.key}
@@ -602,12 +600,12 @@ function GamesDashboard({
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={classNames(
-              "flex items-center gap-2 px-5 py-2.5 rounded-full border text-base font-medium shadow-sm",
+              "flex items-center gap-2 px-6 py-3 rounded-xl border text-base font-bold shadow-sm transition-all duration-300",
               activeGame === t.key
-                ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-transparent"
-                : "bg-white border-slate-300 hover:bg-slate-100"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-transparent shadow-cyan-200"
+                : "bg-white/50 backdrop-blur-sm border-white/30 hover:bg-white/80"
             )}
-            aria-label={`切换到 ${t.label} 游戏`}
+            aria-label={`Switch to ${t.label}`}
           >
             <SafeImage
               src={t.icon}
@@ -885,7 +883,7 @@ function Games() {
         onEventClick={handleEventClick}
         selectedEvent={selectedEvent}
         handleClosePreview={handleClosePreview}
-        toast={toast} 
+        toast={toast}
         setToast={setToast}
       />
     </div>

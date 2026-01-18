@@ -111,8 +111,8 @@ function UserInfo() {
             </h2>
             <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
             <div className='font-semibold text-justify'>
-              I am Puppy_z4nx (<span className='text-cyan-800'>200x</span>), a Software Developer focused on Reverse Engineering and Security Research. 
-              At the same time, I am pursuing the study of data structures and algorithms. 
+              I am Puppy_z4nx (<span className='text-cyan-800'>200x</span>), a Software Developer focused on Reverse Engineering and Security Research.
+              At the same time, I am pursuing the study of data structures and algorithms.
               I am interested in how systems operate internally, exploiting weaknesses and turning knowledge into practical experience.
               <Link className='text-slate-600 underline' to='/skills'>
                 Wanna see more?
@@ -228,54 +228,61 @@ function UserInfo() {
   );
 
   return (
-    <>
-      <div className='md:flex gap-6 items-center'>
-        <div className='md:m-0 mb-5 mx-auto rounded-full min-w-32 size-32 overflow-hidden border-4 border-cyan-500'>
-          <div className='rounded-full overflow-hidden border-4 border-transparent'>
-            <img src={`https://cdn.discordapp.com/avatars/${discord_user.id}/${avatar}.png`} alt='Avatar' />
+    <div className="animate-fadeIn">
+      <div className='md:flex gap-8 items-center'>
+        <div className='md:m-0 mb-6 mx-auto rounded-full min-w-32 size-32 overflow-hidden border-4 border-cyan-400 shadow-lg shadow-cyan-200/50 animate-float'>
+          <div className='rounded-full overflow-hidden border-4 border-white/50'>
+            <img src={`https://cdn.discordapp.com/avatars/${discord_user.id}/${avatar}.png`} alt='Avatar' className="w-full h-full object-cover" />
           </div>
         </div>
-        <div className='text-gray-900 '>
-          <h2 className='font-semibold text-2xl'>
+        <div className='text-gray-900 animate-fadeInUp' style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
+          <h2 className='font-bold text-3xl mb-2'>
             Hey, I'm{" "}
             <Tippy animation='scale' content='Phan Duy Hoàng'>
-              <span className='text-cyan-800'>Puppy-Z4nx</span>
+              <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600'>Puppy-Z4nx</span>
             </Tippy>{" "}
             👋
           </h2>
-          <div className='w-full h-1 bg-cyan-500 rounded-sm my-1'></div>
-          <div className='font-semibold text-justify'>
-            I am Puppy_z4nx (<span className='text-cyan-800'>200x</span>), a Software Developer focused on Reverse Engineering and Security Research. 
-            At the same time, I am pursuing the study of data structures and algorithms. 
+          <div className='w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-4'></div>
+          <div className='font-medium text-slate-700 leading-relaxed text-left md:text-justify'>
+            I am <span className="text-cyan-600 font-bold">Puppy_z4nx</span> (200x), a <span className="italic">Software Developer</span> focused on Reverse Engineering and Security Research.
+            At the same time, I am pursuing the study of data structures and algorithms.
             I am interested in how systems operate internally, exploiting weaknesses and turning knowledge into practical experience.
-            <Link className='text-slate-600 underline' to='/skills'>
-              Wanna see more?
-            </Link>{" "}
-            ✒️
+            <div className="mt-2">
+              <Link className='text-pink-500 hover:text-pink-600 font-bold flex items-center gap-1 transition-colors' to='/skills'>
+                Wanna see more? ✒️
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <div className='font-semibold text-gray-900 mt-4 '>
-        {discord_status === "online" ? online : discord_status === "idle" ? idle : discord_status === "dnd" ? dnd : offline}
-      </div>
-      <div>
-        <div className='flex items-center'>
-          <svg className='w-5 h-5 text-gray-800  -translate-x-[4px] -translate-y-[1px]' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'>
-            <path fillRule='evenodd' d='M12 2a8 8 0 0 1 6.6 12.6l-.1.1-.6.7-5.1 6.2a1 1 0 0 1-1.6 0L6 15.3l-.3-.4-.2-.2v-.2A8 8 0 0 1 11.8 2Zm3 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' clipRule='evenodd' />
-          </svg>
-          <div className='font-semibold text-gray-900 cursor-pointer' onMouseEnter={() => setIsWeather(true)} onMouseLeave={() => setIsWeather(false)}>
-            <p>Vĩnh Phúc, Vietnam</p>
+
+      <div className='space-y-3 mt-6 animate-fadeInUp' style={{ animationDelay: '400ms', animationFillMode: 'both' }}>
+        <div className='font-semibold text-gray-800 flex items-center h-8'>
+          {discord_status === "online" ? online : discord_status === "idle" ? idle : discord_status === "dnd" ? dnd : offline}
+        </div>
+
+        <div className='flex items-center gap-2 group'>
+          <div className="bg-cyan-100 text-cyan-600 p-1.5 rounded-lg group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
+            <svg className='w-4 h-4' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24'>
+              <path fillRule='evenodd' d='M12 2a8 8 0 0 1 6.6 12.6l-.1.1-.6.7-5.1 6.2a1 1 0 0 1-1.6 0L6 15.3l-.3-.4-.2-.2v-.2A8 8 0 0 1 11.8 2Zm3 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z' clipRule='evenodd' />
+            </svg>
+          </div>
+          <div className='font-bold text-slate-700 cursor-pointer relative' onMouseEnter={() => setIsWeather(true)} onMouseLeave={() => setIsWeather(false)}>
+            <p className="hover:text-cyan-600 transition-colors">Vĩnh Phúc, Vietnam</p>
             {isWeather && (
-              <div className='cursor-text absolute z-10 translate-x-[-20px] p-2 rounded-xl bg-slate-100 border-dashed border-cyan-500 border-4'>
-                <p>⛺ City: {weather.name}</p>
-                <p>⛅ Temperature: {weather.main.temp} ºC</p>
-                <p>🚿 Humidity: {weather.main.humidity}%</p>
+              <div className='absolute z-50 left-0 bottom-full mb-2 p-4 rounded-2xl glass-card shadow-xl border border-white/40 min-w-48 animate-fadeInUp'>
+                <div className="space-y-2 text-sm">
+                  <p className="flex justify-between"><span>City:</span> <span className="text-cyan-600 font-bold">{weather.name}</span></p>
+                  <p className="flex justify-between"><span>Temp:</span> <span className="text-pink-500 font-bold">{weather.main.temp} ºC</span></p>
+                  <p className="flex justify-between"><span>Humidity:</span> <span className="text-blue-500 font-bold">{weather.main.humidity}%</span></p>
+                </div>
               </div>
             )}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

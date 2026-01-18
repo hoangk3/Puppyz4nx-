@@ -48,25 +48,30 @@ const GitHubProjects = () => {
 
   return (
     <>
-      {filteredProjects.map((project) => {
+      {filteredProjects.map((project, index) => {
         return (
-          <Link to={`/projects/${project.name}`} key={project.name}>
-            <div className='p-6 rounded-xl bg-slate-100 h-full'>
+          <Link to={`/projects/${project.name}`} key={project.name} className="block h-full">
+            <div
+              className='p-6 glass-card h-full animate-fadeInUp'
+              style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}
+            >
               <div className='flex gap-2 items-center text-cyan-600 mb-2'>
                 <FontAwesomeIcon icon={faBook} />
-                <p>{project.name}</p>
+                <p className="font-bold">{project.name}</p>
               </div>
-              <p className='text-sm truncate w-full overflow-hidden'>Description: {project.description}</p>
-              <div className='flex gap-3 text-sm'>
+              <p className='text-sm truncate w-full overflow-hidden text-neutral-600 mb-4'>
+                {project.description || "No description provided."}
+              </p>
+              <div className='flex gap-4 text-xs text-neutral-500 mt-auto'>
                 {project.language && (
-                  <p>
+                  <p className="flex items-center gap-1">
                     {langIcon[project.language] || <FontAwesomeIcon icon={faFile} />} {project.language}
                   </p>
                 )}
-                <p>
+                <p className="flex items-center gap-1">
                   <FontAwesomeIcon icon={faCodeFork} /> {project.forks_count}
                 </p>
-                <p>
+                <p className="flex items-center gap-1">
                   <FontAwesomeIcon icon={faStar} /> {project.stargazers_count}
                 </p>
               </div>

@@ -25,17 +25,20 @@ class Skill {
     this.skillLevel = skillLevel;
   }
 
-  render() {
+  render(index) {
     return (
-      <div className='p-2 my-1 bg-slate-100 rounded-xl flex gap-4 items-center'>
-        <div className='size-14 min-w-14 rounded-xl overflow-hidden'>
-          <Img className='size-full' src={this.img} alt={this.name} />
+      <div
+        className='p-4 my-2 glass-card flex gap-4 items-center animate-fadeInUp'
+        style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
+      >
+        <div className='size-14 min-w-14 rounded-xl overflow-hidden glass-panel p-2'>
+          <Img className='size-full object-contain' src={this.img} alt={this.name} />
         </div>
         <div className='w-full group hover:*:whitespace-normal overflow-hidden'>
-          <p className='truncate transition-all'>{this.content}</p>
-          <p className='group-hover:hidden text-sm'>
+          <p className='truncate transition-all text-neutral-700 font-medium'>{this.content}</p>
+          <p className='group-hover:hidden text-sm mt-1 text-pink-500'>
             {this.skillLevel.map((level, index) => (
-              <FontAwesomeIcon key={index} icon={level} />
+              <FontAwesomeIcon key={index} icon={level} className="mr-0.5" />
             ))}
           </p>
         </div>
@@ -46,7 +49,7 @@ class Skill {
 
 function Skills() {
   useEffect(() => {
-    document.title = "📚 - Puppy_z4nx";
+    document.title = "Skills 🔍 - Puppy";
   }, []);
 
   const [openCategory, setOpenCategory] = useState(0);
@@ -58,74 +61,73 @@ function Skills() {
   const skillList = [
     new Skill(
       "C++",
-      "C++: A powerful programming language that supports both object-oriented and procedural programming. Commonly used in system software, game development, and high-performance applications (this is the main language of the website owner) ⚡.",
+      "C++: Powerful system language (Owner's main language) ⚡.",
       cppIcon,
       [brandStar, brandStar, brandStar, brandStar, brandStar]
     ),
     new Skill(
       "HTML",
-      "HTML: (HyperText Markup Language) is the building block 🧱 of the web, using tags to define the structure and content of web pages.",
+      "HTML: Structural base for the web 🧱.",
       htmlIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
     new Skill(
       "CSS",
-      "CSS: (Cascading Style Sheets) is a styling language used to design layouts and visual presentation for HTML, helping developers create visually appealing websites 🎨.",
+      "CSS: Designing layout and visuals 🎨.",
       cssIcon,
       [brandStar, brandStar, brandStar, regularStar, regularStar]
     ),
-    // eslint-disable-next-line
     new Skill(
       "JavaScript",
-      "JavaScript: A flexible language that adds interactivity ✨ and dynamic behavior 🥏 to websites, creating engaging user experiences.",
+      "JavaScript: Adding interactivity and dynamic logic ✨.",
       javascriptIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
     new Skill(
       "TypeScript",
-      "TypeScript: A programming language built on top of JavaScript, providing better tooling for large-scale applications.",
+      "TypeScript: Typed superset of JavaScript for scale 🛡️.",
       typescriptIcon,
       [brandStar, brandStar, brandStar, regularStar, regularStar]
     ),
     new Skill(
       "Python",
-      "Python: A language with clean syntax and clear structure, beginner-friendly and easy to learn, widely used across many domains.",
+      "Python: Clean syntax for many domains 🐍.",
       pythonIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
     new Skill(
       "Tailwind CSS",
-      "Tailwind CSS: A utility-first CSS framework that allows developers to quickly build user interfaces without leaving their HTML.",
+      "Tailwind: Utility-first CSS framework 🍃.",
       tailwindIcon,
       [brandStar, brandStar, brandStar, regularStar, regularStar]
     ),
     new Skill(
       "ReactJS",
-      "ReactJS: A library for building native and web user interfaces using reusable components written in JavaScript.",
+      "ReactJS: Modern UI component library ⚛️.",
       reactIcon,
       [brandStar, brandStar, brandStar, regularStar, regularStar]
     ),
     new Skill(
       "Node.js",
-      "Node.js: A server-side JavaScript runtime 🖥 that enables building scalable and efficient web applications.",
+      "Node.js: Server-side JavaScript runtime 🖥️.",
       nodejsIcon,
       [brandStar, regularStar, regularStar, regularStar, regularStar]
     ),
     new Skill(
-      "Visual Studio Code",
-      "Visual Studio Code: A free ✨ and open-source editor developed by Microsoft, offering rich features and extensions for many languages.",
+      "VS Code",
+      "VS Code: Powerful modern editor 🖥️.",
       vscodeIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
     new Skill(
       "GitHub",
-      "GitHub: A platform providing collaboration and version control tools, allowing developers to store 👩‍💻, review, and manage code repositories.",
+      "GitHub: Collaboration and version control 👩‍💻.",
       githubIcon,
       [brandStar, brandStar, brandStar, brandStar, regularStar]
     ),
     new Skill(
       "Notepad++",
-      "Notepad++: A free and open-source 📝 text editor for Windows. Lightweight, fast, and packed with useful features.",
+      "Notepad++: Lightweight text editor 📝.",
       notepadppIcon,
       [brandStar, brandStar, brandStar, brandStar, brandStar]
     ),
@@ -133,54 +135,59 @@ function Skills() {
 
   const categories = [
     {
-      name: "Languages",
-      contents: skillList.slice(0, 5),
+      name: "Core Languages",
+      contents: skillList.slice(0, 6),
     },
     {
-      name: "Frameworks & Styling",
-      contents: skillList.slice(5, 7),
+      name: "Modern Web Stack",
+      contents: skillList.slice(6, 9),
     },
     {
-      name: "Development Tools",
-      contents: skillList.slice(7, 11),
+      name: "Essential Tools",
+      contents: skillList.slice(9, 12),
     },
   ];
 
   return (
-    <div className='font-bold text-neutral-800 w-full pb-4'>
-      <div className='mb-3 flex text-3xl gap-2 font-bold'>
+    <div className='font-bold text-neutral-800 w-full pb-8 animate-fadeIn'>
+      <div className='mb-6 flex text-3xl gap-2 font-bold'>
         <div className='bg-neutral-800 h-[36px] w-2'></div>
         <h2>Skills 🔍</h2>
       </div>
-      <p>
-        Skills and technologies I use to build websites (including other related
-        tools as well). 😊
+      <p className="text-neutral-600 mb-8 font-medium">
+        The stack I use to craft digital experiences. 😊
       </p>
-      <div className='mt-6'>
+      <div className='space-y-6'>
         {categories.map((category, index) => (
           <div
-            className='border-b-slate-600/40 border-b-[1px] cursor-pointer'
+            className='glass-panel overflow-hidden transition-all duration-500 shadow-lg'
             key={index}
+            style={{ borderRadius: '30px' }}
           >
-            <div onClick={() => toggleCategory(index)}>
-              <div className='pt-6 pb-4'>
-                <h2 className='text-lg'>
-                  {category.name}{" "}
-                  {openCategory === index ? (
-                    <span className='text-cyan-600'>-</span>
-                  ) : (
-                    "+"
-                  )}
-                </h2>
+            <div
+              className={`p-5 cursor-pointer flex justify-between items-center transition-all duration-300 ${
+                openCategory === index 
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white' 
+                  : 'hover:bg-white/40'
+              }`}
+              onClick={() => toggleCategory(index)}
+            >
+              <h2 className='text-xl font-bold tracking-wide'>{category.name}</h2>
+              <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                openCategory === index ? 'rotate-180 bg-white/20' : 'bg-black/5'
+              }`}>
+                <span className='text-xl'>{openCategory === index ? '−' : '+'}</span>
               </div>
-              {openCategory === index && (
-                <div>
-                  {category.contents.map((skill, idx) => (
-                    <div key={idx}>{skill.render()}</div>
-                  ))}
-                </div>
-              )}
             </div>
+            {openCategory === index && (
+              <div className="p-5 bg-white/5 space-y-4 animate-fadeIn">
+                {category.contents.map((skill, idx) => (
+                  <div key={idx} className="animate-fadeInUp" style={{ animationDelay: `${idx * 50}ms`, animationFillMode: 'both' }}>
+                    {skill.render(idx)}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>

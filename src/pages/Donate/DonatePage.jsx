@@ -265,14 +265,17 @@ function DonatePage() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-cyan-50 p-8 rounded-2xl shadow-md mt-10 max-w-7xl mx-auto">
-      <h3 className="mb-8 text-3xl font-bold text-cyan-600 tracking-tight">
-        Support Our Work
+    <div className="p-8 glass-panel shadow-lg mt-10 max-w-7xl mx-auto animate-fadeIn">
+      <h3 className="mb-8 text-4xl font-bold text-cyan-500 tracking-tight animate-fadeInUp">
+        Support My Journey 💖
       </h3>
 
       {/* Bank Details */}
-      <div>
-        <h4 className="text-2xl font-semibold text-slate-800 mb-6">Bank Details</h4>
+      <div className="animate-fadeInUp" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
+        <h4 className="text-2xl font-semibold text-slate-700 mb-6 flex items-center gap-2">
+          <span className="bg-cyan-500 w-2 h-6 rounded-full inline-block"></span>
+          Bank Details
+        </h4>
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -282,10 +285,10 @@ function DonatePage() {
           {loading
             ? Array.from({ length: 2 }).map((_, i) => <SkeletonCard key={i} />)
             : DONATION_DATA.banks.map((bank) => (
-                <motion.div key={`bank-${bank.id}`} variants={cardVariants}>
-                  <BankCard data={bank} onClick={handleBankClick} />
-                </motion.div>
-              ))}
+              <motion.div key={`bank-${bank.id}`} variants={cardVariants}>
+                <BankCard data={bank} onClick={handleBankClick} />
+              </motion.div>
+            ))}
         </motion.div>
       </div>
 

@@ -57,7 +57,7 @@ function About() {
             <span>⬤</span> How did I start learning programming?
           </h3>
           <p className="text-slate-800/90 text-pretty">
-            I’ve always been fascinated by how systems, software, and security layers actually work — from low-level instructions to complex defense mechanisms. 
+            I’ve always been fascinated by how systems, software, and security layers actually work — from low-level instructions to complex defense mechanisms.
             That curiosity gradually led me to Reverse Engineering and Security Research: analyzing software from the inside, uncovering hidden weaknesses, and finding practical, efficient solutions.
           </p>
 
@@ -72,29 +72,29 @@ function About() {
           <p className="text-slate-800/90 text-pretty">
             This website is where I document my learning journey and hands-on practice in programming, data structures and algorithms, Reverse Engineering, and Security Research, as well as system analysis and data visualization.
             <br /><br />
-            Everything here is simply a collection of personal notes along my path — nothing more. 
+            Everything here is simply a collection of personal notes along my path — nothing more.
             If you share similar interests, feel free to connect. If not, you’re still welcome to take a look and move on.
           </p>
         </div>
 
         {/* ==== Right Side ==== */}
-        <div>
-          <div className="md:pl-12 lg:pl-20 flex flex-col gap-4">
+        <div className="animate-fadeInUp" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
+          <div className="md:pl-12 lg:pl-20 flex flex-col gap-6">
             {/* Work */}
-            <div className="p-4 rounded-lg border-[2px] bg-slate-100 border-slate-200 shadow-sm hover:shadow-md transition">
-              <div className="flex gap-3 items-center">
-                <div className="text-slate-700">
+            <div className="p-5 glass-card shadow-lg">
+              <div className="flex gap-3 items-center mb-6">
+                <div className="bg-pink-100 text-pink-600 size-10 rounded-xl flex items-center justify-center">
                   <FontAwesomeIcon icon={faBriefcase} />
                 </div>
-                <p>Work</p>
+                <p className="text-xl font-bold">Work</p>
               </div>
-              <div className="flex mt-6 gap-3 items-center">
-                <div className="size-10 rounded-full bg-slate-800 text-slate-100 text-lg flex items-center justify-center">
+              <div className="flex gap-4 items-center p-3 rounded-xl bg-white/30">
+                <div className="size-12 rounded-full bg-slate-800 text-slate-100 text-lg flex items-center justify-center shrink-0">
                   <FontAwesomeIcon icon={faEarthAsia} />
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-sm">Developer</h5>
-                  <div className="flex justify-between text-xs text-slate-700">
+                  <h5 className="font-bold">Developer</h5>
+                  <div className="flex justify-between text-xs text-slate-600">
                     <p>Dottie Community</p>
                     <p>2021 - now</p>
                   </div>
@@ -103,20 +103,20 @@ function About() {
             </div>
 
             {/* Education */}
-            <div className="p-4 rounded-lg border-[2px] bg-slate-100 border-slate-200 shadow-sm hover:shadow-md transition">
-              <div className="flex gap-3 items-center">
-                <div className="text-slate-700">
+            <div className="p-5 glass-card shadow-lg">
+              <div className="flex gap-3 items-center mb-6">
+                <div className="bg-blue-100 text-blue-600 size-10 rounded-xl flex items-center justify-center">
                   <FontAwesomeIcon icon={faUserGraduate} />
                 </div>
-                <p>Education</p>
+                <p className="text-xl font-bold">Education</p>
               </div>
-              <div className="flex mt-6 gap-3 items-center">
-                <div className="size-10 rounded-full bg-slate-800 text-slate-100 text-lg flex items-center justify-center">
+              <div className="flex gap-4 items-center p-3 rounded-xl bg-white/30">
+                <div className="size-12 rounded-full bg-slate-800 text-slate-100 text-lg flex items-center justify-center shrink-0">
                   <FontAwesomeIcon icon={faSchool} />
                 </div>
                 <div className="flex-1">
-                  <h5 className="text-sm">THPT Tam Dương</h5>
-                  <div className="flex justify-between text-xs text-slate-700">
+                  <h5 className="font-bold">THPT Tam Dương</h5>
+                  <div className="flex justify-between text-xs text-slate-600">
                     <p>Student</p>
                     <p>2024 - 2027</p>
                   </div>
@@ -125,18 +125,18 @@ function About() {
               <div className="mt-6">
                 <a
                   href="https://thpttamduong.vinhphuc.edu.vn/home/thpttamduong.html?qi=83_86202472"
-                  className="w-full py-2 flex text-sm hover:bg-slate-700 items-center gap-2 justify-center text-slate-100 bg-slate-800 rounded-lg transition"
+                  className="w-full py-3 flex text-sm hover:bg-slate-700 items-center gap-2 justify-center text-slate-100 bg-slate-800 rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
                 >
                   <FontAwesomeIcon icon={faFaceGrinBeamSweat} />
-                  <span>School Website</span>
+                  <span>Explore School Website</span>
                 </a>
               </div>
             </div>
 
             {/* Certifications */}
-            <div className="p-4 rounded-lg border-[2px] bg-slate-100 border-slate-200 shadow-sm hover:shadow-md transition">
-              <p className="text-lg font-bold text-neutral-700 mb-4">
-                Images / <span className="text-pink-600">{activeCert}</span>
+            <div className="p-5 glass-card shadow-lg overflow-hidden">
+              <p className="text-xl font-bold text-neutral-700 mb-6">
+                Gallery / <span className="text-pink-600">{activeCert}</span>
               </p>
               <Swiper
                 effect={"cards"}

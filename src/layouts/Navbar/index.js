@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   const navItemStyle =
-    "flex items-center gap-1 bg-cyan-200 px-2 py-[2px] rounded-md hover:bg-cyan-500 transition";
+    "flex items-center gap-1 bg-white/40 px-3 py-1 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-md cursor-pointer backdrop-blur-sm border border-white/20";
 
   const aboutIcon = (
     <svg className="w-5 h-5 text-yellow-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,6 @@ function Nav() {
 
   const goalIcon = (
     <svg className="w-5 h-5 text-rose-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-      {/* icon mục tiêu */}
       <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 17a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z" />
       <path d="M12 7a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z" />
     </svg>
@@ -51,27 +50,38 @@ function Nav() {
 
   const donateIcon = (
     <svg className="w-5 h-5 text-red-500 translate-y-[1px]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-      {/* icon donate - trái tim */}
-      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
-               2 6 4 4 6.5 4c1.74 0 3.41 1 4.22 2.44h.56C13.09 5 
-               14.76 4 16.5 4 19 4 21 6 21 8.5c0 3.78-3.4 
-               6.86-8.55 11.54L12 21.35z"/>
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 6 4 4 6.5 4c1.74 0 3.41 1 4.22 2.44h.56C13.09 5 14.76 4 16.5 4 19 4 21 6 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
     </svg>
   );
 
+  const links = [
+    { to: "/", label: "About", icon: aboutIcon },
+    { to: "/projects", label: "Projects", icon: projectIcon },
+    { to: "/skills", label: "Skills", icon: skillIcon },
+    { to: "/games", label: "Games", icon: gameIcon },
+    { to: "/specs", label: "Specs", icon: specIcon },
+    { to: "/pinterest", label: "Anime", icon: animeIcon },
+    { to: "/goal", label: "Goal", icon: goalIcon },
+    { to: "/donate", label: "Donate", icon: donateIcon },
+    { to: "/hentai", label: "Hentai", icon: "🔞" },
+    { to: "/my-gf", label: "My GF", icon: "❤️" },
+  ];
+
   return (
-    <div className="flex md:p-2 pb-8 py-2 px-5 md:rounded-xl bg-white/40 shadow-sm md:mt-3 md:border-none">
+    <div className="flex md:p-2 pb-8 py-2 px-5 md:rounded-xl bg-white/20 backdrop-blur-md shadow-sm md:mt-3 md:border-none animate-fadeIn">
       <div className="flex gap-3 text-neutral-800 font-bold text-base flex-wrap">
-        <Link to="/"><div className={navItemStyle}>About {aboutIcon}</div></Link>
-        <Link to="/projects"><div className={navItemStyle}>Projects {projectIcon}</div></Link>
-        <Link to="/skills"><div className={navItemStyle}>Skills {skillIcon}</div></Link>
-        <Link to="/games"><div className={navItemStyle}>Games {gameIcon}</div></Link>
-        <Link to="/specs"><div className={navItemStyle}>Specs {specIcon}</div></Link>
-        <Link to="/pinterest"><div className={navItemStyle}>Anime {animeIcon}</div></Link>
-        <Link to="/goal"><div className={navItemStyle}>Goal {goalIcon}</div></Link>
-        <Link to="/donate"><div className={navItemStyle}>Donate {donateIcon}</div></Link>
-        <Link to="/hentai"><div className={navItemStyle}>Hentai 🔞</div></Link>
-        <Link to="/my-gf"><div className={navItemStyle}>My GF ❤️</div></Link>
+        {links.map((link, index) => (
+          <Link
+            key={link.to}
+            to={link.to}
+            className="animate-fadeInUp"
+            style={{ animationDelay: `${index * 50}ms`, animationFillMode: 'both' }}
+          >
+            <div className={navItemStyle}>
+              {link.label} {link.icon}
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -3,20 +3,30 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/logo192 copy.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="profile của Puppy_z4nx ~" />
-  <meta name="google-site-verification" content="VSF0gx-tLIuerUoFrxQNW5pceVPcySAcrHafgH_HnKE" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <title>Puppy_z4nx</title>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <script src="%PUBLIC_URL%/js/live2d.js" defer></script>
+
+  <!-- 1. Live2D Core (2.1 & 4.0) -->
+  <script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
+
+  <!-- 2. PIXI.js -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.2/dist/browser/pixi.min.js"></script>
+
+  <!-- 3. PIXI Live2D Display -->
+  <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/index.min.js"></script>
+
+  <!-- 4. Live2dLoader -->
+  <script src="https://cdn.jsdelivr.net/gh/Weidows-projects/Live2dLoader/dist/Live2dLoader.min.js"></script>
+
+  <!-- 5. INIT REM -->
+  <script src="/js/live2d.js"></script>
+
+  <!-- 6. TALK -->
+  <script src="/js/waifu-talk.js"></script>
 </body>
 
 </html>

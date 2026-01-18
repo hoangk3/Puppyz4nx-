@@ -20,20 +20,25 @@
   bubble.id = "waifu-bubble";
   bubble.style.cssText = `
     position: fixed;
-    left: 140px;          /* 👈 lệch sang phải để không đè Rem */
-    bottom: 420px;        /* 👈 nằm trên đầu Rem */
-    max-width: 260px;
-    background: rgba(0,0,0,.8);
-    color: #fff;
-    padding: 10px 14px;
-    border-radius: 12px;
+    left: 10px;           /* 👈 Căn chỉnh lại để không đè lên tóc */
+    bottom: 530px;        /* 👈 Đẩy cao hẳn lên trên đầu */
+    max-width: 250px;
+    background: rgba(255, 255, 255, 0.85); /* Dreamy white glass */
+    backdrop-filter: blur(5px);
+    color: #333;          /* Dark text for better readability on light bg */
+    padding: 12px 18px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 105, 180, 0.3); /* Soft pink border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    line-height: 1.4;
-    z-index: 2147483647;  /* 👈 đè TẤT CẢ */
+    font-weight: 500;
+    line-height: 1.5;
+    z-index: 2147483647;
     pointer-events: none;
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity .3s, transform .3s;
+    transition: opacity .4s, transform .4s, bottom .4s;
+    text-align: center;
   `;
   document.body.appendChild(bubble);
 

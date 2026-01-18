@@ -23,26 +23,27 @@ function DefaultLayout({ children }) {
 
       {/* Sakura Petals */}
       <div className="sakura-container">
-        {[...Array(15)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
             className="sakura"
             style={{
               left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              animationDuration: `${Math.random() * 5 + 5}s`,
-              animationDelay: `${Math.random() * 5}s`,
+              width: `${Math.random() * 8 + 8}px`,
+              height: `${Math.random() * 8 + 8}px`,
+              animationDuration: `${Math.random() * 7 + 8}s`,
+              animationDelay: `${Math.random() * 10}s`,
+              opacity: Math.random() * 0.4 + 0.2,
             }}
           />
         ))}
       </div>
 
       {/* Nội dung */}
-      <div className="relative z-10 max-w-6xl mx-auto md:p-5 animate-fadeIn">
+      <div className="relative z-10 max-w-6xl mx-auto md:p-5 animate-fadeInUp">
         <Header />
         <Navbar />
-        <div className="flex p-5 md:rounded-xl bg-white/40 shadow-sm md:mt-3">
+        <div className="flex flex-col p-5 md:mt-3 glass-panel shadow-lg">
           {children}
         </div>
         <Footer />

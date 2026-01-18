@@ -77,47 +77,55 @@ function Specs() {
         activities 💻.
       </p>
 
-      <div className="w-full mt-4 grid md:grid-cols-2 grid-cols-1 gap-5">
-        <div>
-          <div className="mb-4 p-2 rounded-xl bg-slate-100">
-            <h4 className="mb-1 text-2xl font-bold">
-              PC{" "}
-              <span className="text-xl ml-2 inline-block">
-                (custom-built desktop)
-              </span>
+      <div className="w-full mt-8 grid md:grid-cols-2 grid-cols-1 gap-8 animate-fadeInUp" style={{ animationDelay: '200ms', animationFillMode: 'both' }}>
+        <div className="space-y-6">
+          <div className="p-5 glass-card shadow-lg">
+            <h4 className="mb-4 text-2xl font-bold flex items-center gap-2">
+              <span className="bg-cyan-500 w-2 h-6 rounded-full inline-block"></span>
+              PC Setup
+              <span className="text-sm font-normal text-slate-500 ml-auto">(Custom Desktop)</span>
             </h4>
             <LaptopInfo {...laptopSpecs} />
           </div>
 
-          <div className="p-2 rounded-xl bg-slate-100">
-            <h4 className="mb-1 text-2xl font-bold">Phone</h4>
+          <div className="p-5 glass-card shadow-lg">
+            <h4 className="mb-4 text-2xl font-bold flex items-center gap-2">
+              <span className="bg-blue-500 w-2 h-6 rounded-full inline-block"></span>
+              Mobile
+            </h4>
             <PhoneInfo {...phoneSpecs} />
           </div>
         </div>
 
-        <div>
-          <div className="mb-4 p-2 rounded-xl bg-slate-100">
-            <h4 className="mb-1 text-2xl font-bold">Network</h4>
-            <ul className="list-disc text-sm ml-6">
+        <div className="space-y-6">
+          <div className="p-5 glass-card shadow-lg">
+            <h4 className="mb-4 text-2xl font-bold flex items-center gap-2">
+              <span className="bg-emerald-500 w-2 h-6 rounded-full inline-block"></span>
+              Network
+            </h4>
+            <ul className="list-disc text-sm ml-6 space-y-2 text-slate-600">
               <li>4G Network: Viettel (ST90N)</li>
               <li>Download speed: 50MB/s</li>
               <li>Upload speed: 2MB/s</li>
             </ul>
           </div>
 
-          <div className="p-2 rounded-xl bg-slate-100">
-            <h4 className="mb-1 text-2xl font-bold">Other Devices</h4>
-            <ul className="list-disc text-sm ml-6">
+          <div className="p-5 glass-card shadow-lg text-slate-600">
+            <h4 className="mb-4 text-2xl font-bold flex items-center gap-2 text-slate-800">
+              <span className="bg-purple-500 w-2 h-6 rounded-full inline-block"></span>
+              Peripherals
+            </h4>
+            <ul className="list-disc text-sm ml-6 space-y-2">
               <li>Mouse: Razer DeathAdder V2 HyperSpeed</li>
               <li>Monitor: Full HD Gaming Monitor 100Hz</li>
-              <li>Keyboard: Aula F75 (navy blue)</li>
+              <li>Keyboard: Aula F75 (Navy Blue)</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div className="my-6 border-dashed border-8 border-cyan-500 rounded-3xl overflow-hidden w-11/12 rotate-[355deg] mx-auto">
-        <img src={desktop} alt="desktop.jpg" />
+      <div className="my-12 glass-panel border-4 border-dashed border-cyan-400/50 p-4 rounded-3xl overflow-hidden w-11/12 rotate-[2deg] mx-auto shadow-2xl animate-float">
+        <img src={desktop} alt="desktop.jpg" className="rounded-2xl" />
       </div>
     </div>
   );
