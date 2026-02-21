@@ -12,36 +12,16 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const socials = [
-  {
-    name: "Gmail",
-    href: "mailto:phanduyhoang123456@gmail.com",
-    icon: faEnvelope,
-  },
-  {
-    name: "Github",
-    href: "https://github.com/hoangk3",
-    icon: faGithub,
-  },
-  {
-    name: "Discord",
-    href: "https://discord.com/users/789428736868876298",
-    icon: faDiscord,
-  },
-  {
-    name: "Youtube",
-    href: "https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA",
-    icon: faYoutube,
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/Puppyz4nx",
-    icon: faFacebook,
-  },
+  { name: "Gmail", href: "mailto:phanduyhoang123456@gmail.com", icon: faEnvelope },
+  { name: "Github", href: "https://github.com/hoangk3", icon: faGithub },
+  { name: "Discord", href: "https://discord.com/users/789428736868876298", icon: faDiscord },
+  { name: "Youtube", href: "https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA", icon: faYoutube },
+  { name: "Facebook", href: "https://www.facebook.com/Puppyz4nx", icon: faFacebook },
 ];
 
 function Header() {
   return (
-    <header className="p-4 md:p-6 rounded-2xl glass-dark text-white animate-fadeIn border border-white/15">
+    <header className="p-4 md:p-6 rounded-2xl glass-dark text-slate-800 animate-fadeIn border border-white/70 shadow-lg shadow-slate-400/20">
       <Discord />
       <div className="flex mt-5 gap-2 text-xl flex-wrap">
         {socials.map((item) => (
@@ -49,7 +29,7 @@ function Header() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-xl bg-white/10 size-10 items-center flex justify-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover-glow border border-white/20"
+              className="rounded-xl bg-white/70 size-10 items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow border border-white/80"
               href={item.href}
             >
               <FontAwesomeIcon icon={item.icon} />
