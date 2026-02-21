@@ -4,12 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 body {
   font-family: "Recursive", sans-serif;
   overflow-y: scroll;
+  background: #020617;
 }
 
-/* Global Animations */
 .animate-fadeIn {
   animation: fadeIn 0.8s ease-out forwards;
 }
@@ -23,7 +27,7 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+  box-shadow: 0 0 22px rgba(34, 211, 238, 0.45);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
@@ -32,7 +36,6 @@ body {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -41,9 +44,8 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -51,24 +53,18 @@ body {
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
-/* Updated Sakura Animation */
 .sakura-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none;
   z-index: 5;
   overflow: hidden;
@@ -78,9 +74,9 @@ body {
   position: absolute;
   background-color: #fff;
   border-radius: 100% 0 100% 0;
-  opacity: 0.4;
+  opacity: 0.36;
   background: linear-gradient(135deg, #fff 0%, #ffd1dc 100%);
-  filter: drop-shadow(0 0 2px rgba(255, 192, 203, 0.4));
+  filter: drop-shadow(0 0 2px rgba(255, 192, 203, 0.35));
   animation: fall linear infinite;
 }
 
@@ -88,46 +84,66 @@ body {
   0% {
     transform: translate(0, -10px) rotate(0deg) skewX(0deg);
   }
-
   25% {
     transform: translate(25px, 25vh) rotate(90deg) skewX(10deg);
   }
-
   50% {
     transform: translate(0px, 50vh) rotate(180deg) skewX(-10deg);
   }
-
   75% {
     transform: translate(25px, 75vh) rotate(270deg) skewX(10deg);
   }
-
   100% {
     transform: translate(0px, 100vh) rotate(360deg) skewX(0deg);
   }
+}
+
+.ambient-blob {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ambient-blob--one {
+  top: -120px;
+  right: -100px;
+  background: rgba(34, 211, 238, 0.28);
+}
+
+.ambient-blob--two {
+  left: -140px;
+  bottom: -100px;
+  background: rgba(167, 139, 250, 0.26);
 }
 
 .data-tippy-root {
   font-weight: 600;
 }
 
-/* Glassmorphism Utilities */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 32px;
+  background: linear-gradient(140deg, rgba(15, 23, 42, 0.56), rgba(30, 41, 59, 0.46));
+  backdrop-filter: blur(14px);
+  border-radius: 28px;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 24px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.glass-dark {
+  background: linear-gradient(140deg, rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.45));
+  backdrop-filter: blur(14px);
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(1.02) translateY(-5px);
-  box-shadow: 0 15px 35px rgba(255, 182, 193, 0.3);
+  transform: scale(1.015) translateY(-3px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
 }
