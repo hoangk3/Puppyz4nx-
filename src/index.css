@@ -5,21 +5,25 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  --text-main: #0f172a;
+  --text-soft: #334155;
+  --brand: #0284c7;
+  --brand-soft: #67e8f9;
 }
 
 body {
   font-family: "Recursive", sans-serif;
   overflow-y: scroll;
-  background: #020617;
+  color: var(--text-main);
+  background: #e2e8f0;
 }
 
 .animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.7s ease-out forwards;
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-float {
@@ -27,9 +31,9 @@ body {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 22px rgba(34, 211, 238, 0.45);
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.28);
   transform: translateY(-2px);
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 @keyframes fadeIn {
@@ -44,7 +48,7 @@ body {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -58,7 +62,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
@@ -72,11 +76,10 @@ body {
 
 .sakura {
   position: absolute;
-  background-color: #fff;
   border-radius: 100% 0 100% 0;
-  opacity: 0.36;
-  background: linear-gradient(135deg, #fff 0%, #ffd1dc 100%);
-  filter: drop-shadow(0 0 2px rgba(255, 192, 203, 0.35));
+  opacity: 0.28;
+  background: linear-gradient(135deg, #fff 0%, #fda4af 100%);
+  filter: drop-shadow(0 0 2px rgba(244, 114, 182, 0.24));
   animation: fall linear infinite;
 }
 
@@ -85,13 +88,13 @@ body {
     transform: translate(0, -10px) rotate(0deg) skewX(0deg);
   }
   25% {
-    transform: translate(25px, 25vh) rotate(90deg) skewX(10deg);
+    transform: translate(18px, 25vh) rotate(90deg) skewX(8deg);
   }
   50% {
-    transform: translate(0px, 50vh) rotate(180deg) skewX(-10deg);
+    transform: translate(0px, 50vh) rotate(180deg) skewX(-8deg);
   }
   75% {
-    transform: translate(25px, 75vh) rotate(270deg) skewX(10deg);
+    transform: translate(18px, 75vh) rotate(270deg) skewX(8deg);
   }
   100% {
     transform: translate(0px, 100vh) rotate(360deg) skewX(0deg);
@@ -100,8 +103,8 @@ body {
 
 .ambient-blob {
   position: fixed;
-  width: 420px;
-  height: 420px;
+  width: 360px;
+  height: 360px;
   border-radius: 999px;
   filter: blur(80px);
   z-index: 1;
@@ -109,15 +112,15 @@ body {
 }
 
 .ambient-blob--one {
-  top: -120px;
+  top: -90px;
   right: -100px;
-  background: rgba(34, 211, 238, 0.28);
+  background: rgba(56, 189, 248, 0.28);
 }
 
 .ambient-blob--two {
-  left: -140px;
-  bottom: -100px;
-  background: rgba(167, 139, 250, 0.26);
+  left: -100px;
+  bottom: -90px;
+  background: rgba(251, 113, 133, 0.2);
 }
 
 .data-tippy-root {
@@ -125,25 +128,25 @@ body {
 }
 
 .glass-panel {
-  background: linear-gradient(140deg, rgba(15, 23, 42, 0.56), rgba(30, 41, 59, 0.46));
-  backdrop-filter: blur(14px);
-  border-radius: 28px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.7), rgba(241, 245, 249, 0.64));
+  backdrop-filter: blur(11px);
+  border-radius: 26px;
 }
 
 .glass-card {
-  background: rgba(15, 23, 42, 0.62);
+  background: rgba(255, 255, 255, 0.74);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .glass-dark {
-  background: linear-gradient(140deg, rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.45));
-  backdrop-filter: blur(14px);
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.72), rgba(241, 245, 249, 0.62));
+  backdrop-filter: blur(12px);
 }
 
 .glass-card:hover {
-  transform: scale(1.015) translateY(-3px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.35);
+  transform: scale(1.01) translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
 }
