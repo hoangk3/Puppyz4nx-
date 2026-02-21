@@ -4,28 +4,44 @@ import "tippy.js/dist/tippy.css";
 
 function Footer() {
   return (
-    <div className='flex p-5 md:rounded-xl bg-white/40 shadow-sm md:mt-3'>
-      <div className='sm:flex text-center justify-between text-sm w-full text-neutral-800 font-medium'>
+    <footer className="flex p-4 md:p-5 rounded-2xl glass-dark border border-white/10">
+      <div className="sm:flex text-center justify-between text-sm w-full text-slate-100 font-medium gap-3">
         <p>
           2025 ©Puppy_z4nx • Made with{" "}
-          <a href='https://react.dev/' target='_blank' rel='noopener noreferrer' className='text-cyan-600'>
+          <a
+            href="https://react.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 hover:text-cyan-200"
+          >
             React
           </a>{" "}
           x{" "}
-          <a href='https://tailwindcss.com/' target='_blank' rel='noopener noreferrer' className='text-cyan-600'>
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-300 hover:text-cyan-200"
+          >
             Tailwind
           </a>
         </p>
         <p>
-          <Tippy animation='scale' content='Where i learning ? (click)'>
-            <a className='text-cyan-600' href='https://www.w3schools.com/' target='_blank' rel='noopener noreferrer'>
-             About My Knowledge ?  <span className='text-neutral-800'>•</span> ✨
+          <Tippy animation="scale" content="Where i learning ? (click)">
+            <a
+              className="text-cyan-300 hover:text-cyan-100"
+              href="https://www.w3schools.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              About My Knowledge? <span className="text-slate-300">•</span> ✨
             </a>
           </Tippy>
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
 
 export default Footer;
+
