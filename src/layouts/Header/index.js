@@ -3,47 +3,62 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/animations/scale.css";
 import "tippy.js/dist/tippy.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faGithub, faDiscord, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faGithub,
+  faDiscord,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
+const socials = [
+  {
+    name: "Gmail",
+    href: "mailto:phanduyhoang123456@gmail.com",
+    icon: faEnvelope,
+  },
+  {
+    name: "Github",
+    href: "https://github.com/hoangk3",
+    icon: faGithub,
+  },
+  {
+    name: "Discord",
+    href: "https://discord.com/users/789428736868876298",
+    icon: faDiscord,
+  },
+  {
+    name: "Youtube",
+    href: "https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA",
+    icon: faYoutube,
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/Puppyz4nx",
+    icon: faFacebook,
+  },
+];
 
 function Header() {
   return (
-    <div className='p-5 md:rounded-xl bg-white/40 shadow-sm text-neutral-800 animate-fadeIn'>
-      <Discord></Discord>
-      <div className='flex mt-4 gap-2 text-xl'>
-        <Tippy animation='scale' content='Gmail'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='mailto:phanduyhoang123456@gmail.com'>
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-        </Tippy>
-        <Tippy animation='scale' content='Github'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://github.com/hoangk3'>
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </Tippy>
-        <Tippy animation='scale' content='Discord'>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
-            className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow'
-            href='https://discord.com/users/789428736868876298'>
-            <FontAwesomeIcon icon={faDiscord} />
-          </a>
-        </Tippy>
-        <Tippy animation='scale' content='Youtube'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://www.youtube.com/channel/UC1dZ6CfgwYDWeopGkoCxKpA'>
-            <FontAwesomeIcon icon={faYoutube} />
-          </a>
-        </Tippy>
-        <Tippy animation='scale' content='Facebook'>
-          <a target='_blank' rel='noopener noreferrer' className='rounded-full bg-cyan-100 size-[38px] items-center flex justify-center hover:bg-cyan-500 hover:text-white transition-all duration-300 hover-glow' href='https://www.facebook.com/Puppyz4nx'>
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-        </Tippy>
+    <header className="p-4 md:p-6 rounded-2xl glass-dark text-white animate-fadeIn border border-white/15">
+      <Discord />
+      <div className="flex mt-5 gap-2 text-xl flex-wrap">
+        {socials.map((item) => (
+          <Tippy key={item.name} animation="scale" content={item.name}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl bg-white/10 size-10 items-center flex justify-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover-glow border border-white/20"
+              href={item.href}
+            >
+              <FontAwesomeIcon icon={item.icon} />
+            </a>
+          </Tippy>
+        ))}
       </div>
-    </div>
+    </header>
   );
 }
 
 export default Header;
-
