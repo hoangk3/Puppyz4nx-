@@ -14,16 +14,16 @@ function DefaultLayout({ children }) {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed", // giữ nền cố định khi scroll
-        transition: "background-image 0.8s ease-in-out", // mượt khi đổi ảnh
+        backgroundAttachment: "fixed",
       }}
     >
-      {/* Overlay - Dreamy white effect */}
-      <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-900/40 to-indigo-950/55" />
 
-      {/* Sakura Petals */}
+      <div className="ambient-blob ambient-blob--one" />
+      <div className="ambient-blob ambient-blob--two" />
+
       <div className="sakura-container">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(12)].map((_, i) => (
           <div
             key={i}
             className="sakura"
@@ -39,17 +39,15 @@ function DefaultLayout({ children }) {
         ))}
       </div>
 
-      {/* Nội dung */}
-      <div className="relative z-10 max-w-6xl mx-auto md:p-5 animate-fadeInUp">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 animate-fadeInUp space-y-4">
         <Header />
         <Navbar />
-        <div className="flex flex-col p-5 md:mt-3 glass-panel shadow-lg">
+        <main className="flex flex-col p-4 md:p-7 glass-panel shadow-2xl shadow-black/20 border border-white/15">
           {children}
-        </div>
+        </main>
         <Footer />
       </div>
 
-      {/* Global Music Player */}
       <MusicPlayer />
     </div>
   );
