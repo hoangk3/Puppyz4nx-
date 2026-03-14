@@ -3,57 +3,51 @@ import "./MusicPlayer.css";
 
 export default function MusicPlayer() {
 
-  const spotifyRef = useRef(null);
-  const apiRef = useRef(null);
+  const audioRef = useRef(null);
 
-  const [apiReady, setApiReady] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [minimized, setMinimized] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
-  const trackUrl =
-    "https://open.spotify.com/track/1Ipu7wzbc2qM7muqszyiZD";
+  const musicSrc = "https://files.catbox.moe/cyukhx.mp3";
 
-  const toSpotifyUri = (url) => {
-    const match = url.match(/track\/([a-zA-Z0-9]+)/);
-    return match ? `spotify:track:${match[1]}` : url;
+  const togglePlay = async () => {
+    const audio = audioRef.current;
+
+    if (!audio) return;
+
+    if (audio.paused) {
+      await audio.play();
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      setIsPlaying(false);
+    }
   };
 
-  /* load spotify api */
+  const handleTimeUpdate = () => {
+    const audio = audioRef.current;
+    setCurrentTime(audio.currentTime);
+    setDuration(audio.duration || 0);
+  };
+
+  const handleSeek = (e) => {
+    const audio = audioRef.current;
+    audio.currentTime = e.target.value;
+  };
+
+  const formatTime = (time) => {
+    if (!time) return "0:00";
+    const m = Math.floor(time / 60);
+    const s = Math.floor(time % 60);
+    return `${m}:${s < 10 ? "0" + s : s}`;
+  };
 
   useEffect(() => {
-
-    const script = document.createElement("script");
-    script.src = "https://open.spotify.com/embed/iframe-api/v1";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    window.onSpotifyIframeApiReady = (api) => {
-      apiRef.current = api;
-      setApiReady(true);
-    };
-
+    const audio = audioRef.current;
+    audio.volume = 0.4;
   }, []);
-
-  /* create player */
-
-  useEffect(() => {
-
-    if (!apiReady || !spotifyRef.current) return;
-
-    spotifyRef.current.innerHTML = "";
-
-    apiRef.current.createController(
-      spotifyRef.current,
-      {
-        uri: toSpotifyUri(trackUrl),
-        width: "100%",
-        height: "80",
-        theme: 0
-      },
-      () => {}
-    );
-
-  }, [apiReady]);
 
   return (
     <div
@@ -62,9 +56,15 @@ export default function MusicPlayer() {
       onClick={minimized ? () => setMinimized(false) : undefined}
     >
 
+      <audio
+        ref={audioRef}
+        src={musicSrc}
+        onTimeUpdate={handleTimeUpdate}
+      />
+
       {minimized && (
-        <div className="mp-mini-icon">
-          <i className="fa-brands fa-spotify"></i>
+        <div className={`mp-mini-icon ${!isPlaying ? "paused" : ""}`}>
+          <i className="fa-solid fa-compact-disc"></i>
         </div>
       )}
 
@@ -74,13 +74,15 @@ export default function MusicPlayer() {
 
             <div className="mp-info-container">
 
-              <div className="mp-track-icon">
-                <i className="fa-brands fa-spotify spotify-green"></i>
+              <div className={`mp-track-icon ${isPlaying ? "spinning" : ""}`}>
+                <i className="fa-solid fa-music"></i>
               </div>
 
               <div className="mp-info-text">
-                <div className="mp-title">Tâm sự</div>
-                <div className="mp-status">Spotify Track</div>
+                <div className="mp-title">Music Player</div>
+                <div className="mp-status">
+                  {formatTime(currentTime)} / {formatTime(duration)}
+                </div>
               </div>
 
             </div>
@@ -97,15 +99,53 @@ export default function MusicPlayer() {
 
           </div>
 
-          <div className="mp-embed" ref={spotifyRef}></div>
+          {/* progress bar */}
 
-          <div className="mp-spotify-badge">
-            <i className="fa-brands fa-spotify"></i>
-            Spotify
+          <div className="mp-progress-container">
+
+            <div className="mp-progress-bg">
+              <div
+                className="mp-progress-bar"
+                style={{
+                  width:
+                    duration > 0
+                      ? `${(currentTime / duration) * 100}%`
+                      : "0%"
+                }}
+              />
+            </div>
+
+            <input
+              type="range"
+              min="0"
+              max={duration || 0}
+              value={currentTime}
+              step="0.1"
+              className="mp-seek-slider"
+              onChange={handleSeek}
+            />
+
+          </div>
+
+          {/* controls */}
+
+          <div className="mp-controls">
+
+            <button
+              className="mp-btn main-c"
+              onClick={(e) => {
+                e.stopPropagation();
+                togglePlay();
+              }}
+            >
+              {isPlaying
+                ? <i className="fa-solid fa-pause"></i>
+                : <i className="fa-solid fa-play"></i>}
+            </button>
+
           </div>
         </>
       )}
-
     </div>
   );
 }
